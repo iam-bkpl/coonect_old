@@ -1,0 +1,516 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "backend.connect.asgi",
+        "description": "backend.connect.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "backend.connect.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure--dd5f&onb$_2*rde=ddl7a9ro%q8i2cid(a#3hw%%3s0b5#7@%'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure--dd5f&onb$_2*rde=ddl7a9ro%q8i2cid(a#3hw%%3s0b5#7@%'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'core'",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'core'\n]\nMIDDLEWARE = [",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'connect.urls'",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "ROOT_URLCONF = 'connect.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / os.path.join('templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / os.path.join('templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'connect.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "backend.connect.settings",
+        "description": "backend.connect.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "backend.connect.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "backend.connect.urls",
+        "description": "backend.connect.urls",
+        "peekOfCode": "urlpatterns = [\n    path('',include('core.urls')),\n    path('admin/', admin.site.urls),\n]\nif settings.DEBUG:\n    urlpatterns += static( settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)",
+        "detail": "backend.connect.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "backend.connect.wsgi",
+        "description": "backend.connect.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "backend.connect.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "CoreConfig",
+        "kind": 6,
+        "importPath": "backend.core.apps",
+        "description": "backend.core.apps",
+        "peekOfCode": "class CoreConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'core'",
+        "detail": "backend.core.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AdminBank",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class AdminBank(models.Model):\n  account_name = models.CharField(max_length=255)\n  bank_name = models.CharField(max_length=255)\n  branch = models.CharField(max_length=255)\n  account_number = models.CharField(max_length=255)\n  qr_code = models.ImageField(upload_to='admin_bank')\nclass Timing(models.Model):\n  first_day = models.CharField(max_length=255)\n  last_day = models.CharField(max_length=255)\n  start_time = models.TimeField(auto_now=True)",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Timing",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class Timing(models.Model):\n  first_day = models.CharField(max_length=255)\n  last_day = models.CharField(max_length=255)\n  start_time = models.TimeField(auto_now=True)\n  end_time = models.TimeField(auto_now=True)\nclass HomePageImage(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  image = models.ImageField(upload_to='home')\nclass AboutUs(models.Model):\n  imgage = models.ImageField(upload_to='abouts/images', blank=True, null=True)",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "HomePageImage",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class HomePageImage(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  image = models.ImageField(upload_to='home')\nclass AboutUs(models.Model):\n  imgage = models.ImageField(upload_to='abouts/images', blank=True, null=True)\n  text = models.TextField(blank=True, null=True)\nclass SocialLink(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  link = models.URLField(blank=True,null=True)  \nclass Team(models.Model):",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "AboutUs",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class AboutUs(models.Model):\n  imgage = models.ImageField(upload_to='abouts/images', blank=True, null=True)\n  text = models.TextField(blank=True, null=True)\nclass SocialLink(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  link = models.URLField(blank=True,null=True)  \nclass Team(models.Model):\n  image = models.ImageField(upload_to='team/images', blank=True, null=True)\n  name = models.CharField(max_length=255)\n  position = models.CharField(max_length=255, blank=True, null=True)",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "SocialLink",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class SocialLink(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  link = models.URLField(blank=True,null=True)  \nclass Team(models.Model):\n  image = models.ImageField(upload_to='team/images', blank=True, null=True)\n  name = models.CharField(max_length=255)\n  position = models.CharField(max_length=255, blank=True, null=True)\n  socia_link = models.ForeignKey(SocialLink, on_delete=models.CASCADE)\nclass Service(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Team",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class Team(models.Model):\n  image = models.ImageField(upload_to='team/images', blank=True, null=True)\n  name = models.CharField(max_length=255)\n  position = models.CharField(max_length=255, blank=True, null=True)\n  socia_link = models.ForeignKey(SocialLink, on_delete=models.CASCADE)\nclass Service(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  image = models.ImageField(upload_to='service/images')\n  text = models.TextField()\nclass Partners(models.Model):",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class Service(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  image = models.ImageField(upload_to='service/images')\n  text = models.TextField()\nclass Partners(models.Model):\n  name = models.CharField(max_length=255)\n  image = models.ImageField(upload_to='partner/images')\nclass Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Partners",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class Partners(models.Model):\n  name = models.CharField(max_length=255)\n  image = models.ImageField(upload_to='partner/images')\nclass Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='event/images')\n  location = models.CharField(max_length=255)\n  hover_text = models.CharField(max_length=255)\n  date = models.DateTimeField(auto_now=True)",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='event/images')\n  location = models.CharField(max_length=255)\n  hover_text = models.CharField(max_length=255)\n  date = models.DateTimeField(auto_now=True)\nclass MainService(models.Model):\n  name = models.CharField(max_length=255)\n  price = models.PositiveIntegerField()",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "MainService",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class MainService(models.Model):\n  name = models.CharField(max_length=255)\n  price = models.PositiveIntegerField()\n  location = models.CharField(max_length=255)\n  description = models.TextField()\nclass Contact(models.Model):\n  phone = models.CharField(max_length=20)\n  email = models.EmailField()\n  address = models.CharField(max_length=255)\nclass Member(models.Model):",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class Contact(models.Model):\n  phone = models.CharField(max_length=20)\n  email = models.EmailField()\n  address = models.CharField(max_length=255)\nclass Member(models.Model):\n  MEMBERSHIP_TYPE_INDIVIDUAL = 'individual'\n  MEMBERSHIP_TYPE_FAMILY = 'family'\n  MEMBERSHIP_TYPE_STUDENT = 'student'\n  MEMBERSHIP_TYPE_CHOICES = [\n    (MEMBERSHIP_TYPE_INDIVIDUAL, 'individual'),",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Member",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class Member(models.Model):\n  MEMBERSHIP_TYPE_INDIVIDUAL = 'individual'\n  MEMBERSHIP_TYPE_FAMILY = 'family'\n  MEMBERSHIP_TYPE_STUDENT = 'student'\n  MEMBERSHIP_TYPE_CHOICES = [\n    (MEMBERSHIP_TYPE_INDIVIDUAL, 'individual'),\n    (MEMBERSHIP_TYPE_FAMILY, 'family'),\n    (MEMBERSHIP_TYPE_STUDENT, 'student'),\n    ]\n  MEMBERSHIP_DURATION_ANNUAL= 'annual'",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "SubscriptionPlan",
+        "kind": 6,
+        "importPath": "backend.core.models",
+        "description": "backend.core.models",
+        "peekOfCode": "class SubscriptionPlan(models.Model):\n  name = models.CharField(max_length=255)\n  description = models.TextField(null=True, blank=True)",
+        "detail": "backend.core.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "backend.core.urls",
+        "description": "backend.core.urls",
+        "peekOfCode": "urlpatterns = [\n  path('',views.Home.as_view(), name='home')\n]",
+        "detail": "backend.core.urls",
+        "documentation": {}
+    },
+    {
+        "label": "Home",
+        "kind": 6,
+        "importPath": "backend.core.views",
+        "description": "backend.core.views",
+        "peekOfCode": "class Home(View):\n  def get(self,request):\n    return render(request, 'index.html')",
+        "detail": "backend.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "backend.manage",
+        "description": "backend.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'connect.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "backend.manage",
+        "documentation": {}
+    }
+]
