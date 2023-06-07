@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -127,3 +128,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# JAZZMIN_UI_TWEAKS = {
+
+#     "theme": "minty",
+#     "dark_mode_theme": "superhero",
+# }
+JAZZMIN_SETTINGS ={
+    "site_title": "Connect Admin",
+     "site_header": "Connect",
+      "site_brand": "Connect",
+}
+

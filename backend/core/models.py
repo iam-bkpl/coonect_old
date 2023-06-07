@@ -67,7 +67,7 @@ class Contact(models.Model):
 
 
 
-class Member(models.Model):
+class Membership(models.Model):
   MEMBERSHIP_TYPE_INDIVIDUAL = 'individual'
   MEMBERSHIP_TYPE_FAMILY = 'family'
   MEMBERSHIP_TYPE_STUDENT = 'student'

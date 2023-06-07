@@ -1,3 +1,36 @@
 from django.contrib import admin
+from core.models import (
+  AdminBank,
+  Timing,
+  HomePageImage,
+  AboutUs,
+  SocialLink,
+  Team,
+  Service,
+  Partners,
+  Event,
+  MainService,
+  Contact,
+  Membership,
+  SubscriptionPlan,
+)
 
-# Register your models here.
+admin.site.register(AdminBank)
+admin.site.register(Timing)
+admin.site.register(HomePageImage)
+admin.site.register(AboutUs)
+admin.site.register(SocialLink)
+admin.site.register(Team)
+admin.site.register(Service)
+admin.site.register(Partners)
+admin.site.register(Event)
+admin.site.register(MainService)
+admin.site.register(Contact)
+admin.site.register(Membership)
+admin.site.register(SubscriptionPlan)
+
+
+
+
+
+
