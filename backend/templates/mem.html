@@ -53,12 +53,13 @@
               <p>Account Number: {{admin_bank.account_number}}</p>
             </div>
           </div>
-          {% csrf_token %}
           <form
-            id="membership-form"
             action="{% url 'membership' %}"
             method="post"
+            enctype="multipart/form-data"
           >
+            {% csrf_token %}
+
             <h2 style="color: #00f">Membership Registration</h2>
             <br />
             <p>
@@ -89,7 +90,7 @@
             </div>
             <div class="input-wrapper">
               <label for="pp-photo">PP Size Photo Upload:</label>
-              <input type="file" id="pp-photo" name="avatar" required />
+              <input type="file" id="profile" name="profile" required />
             </div>
             <div class="input-wrapper">
               <label for="pp-photo">Passport Front :</label>
@@ -128,14 +129,19 @@
               <input
                 type="file"
                 id="membership-fee"
-                name="membership-fee"
+                name="membership_receipt"
                 required
               />
             </div>
 
             <div class="input-wwrapper">
               <label for="terms" class="checkbox-label">
-                <input type="checkbox" id="terms" name="terms" required />
+                <input
+                  type="checkbox"
+                  id="terms"
+                  name="agree_terms_condition"
+                  required
+                />
               </label>
               <span style="padding-left: 5px"
                 >I agree to the terms and conditions
@@ -147,6 +153,7 @@
         </div>
       </div>
 
+      {% comment %}
       <div class="popup" id="success-popup">
         <div class="popup-content">
           <span class="close-popup">&times;</span>
@@ -154,6 +161,7 @@
           <p>Your form has been submitted successfully.</p>
         </div>
       </div>
+      {% endcomment %}
 
       <!-- **************Latest Rooom************** -->
 

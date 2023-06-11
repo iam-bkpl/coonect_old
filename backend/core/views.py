@@ -4,6 +4,7 @@ from django.shortcuts import render,redirect
 from .models import (AboutUs, AdminBank, Contact, Event, Membership, Partners, Service,
   SubscriptionPlan, Team)
 from django.utils import timezone
+import random
 
 class HomeView(View):
   def get(self,request):
@@ -83,19 +84,24 @@ class MembershipView(View):
     address = request.POST.get('address')
     phone = request.POST.get('phone')
     email = request.POST.get('email')
-    avatar = request.FILES.get('avatar')
+    profile = request.FILES.get('profile')
     passport_front = request.FILES.get('passport_front')
     passport_back = request.FILES.get('passport_back')
     membership_type = request.POST.get('membership_type')
     membership_duration = request.POST.get('membership_duration')
-    agree_terms_condition = request.POST.get('agree_terms_condition')
+    membership_receipt  = request.FILES.get('membership_receipt')
+    agree_terms_condition =request.POST.get('agree_terms_condition', False) == 'on'
     
+    
+    random_number = random.randint(1000, 9999)
+    username = f"{first_name}{last_name}#{random_number}"
     user = User.objects.create_user(
-      email=email, first_name=first_name, last_name=last_name,
+      email=email, first_name=first_name, last_name=last_name,username=username
     )
     user.save()
     membership = Membership(
-      user=user, address=address, phone=phone, avatar=avatar, passport_front = passport_front, passport_back= passport_back, membership_type=membership_type, membership_duration=membership_duration, agree_terms_condition=agree_terms_condition)
+      user=user, address=address, phone=phone, profile=profile, passport_front = passport_front, passport_back= passport_back, membership_type=membership_type, membership_duration=membership_duration, membership_receipt = membership_receipt,agree_terms_condition=agree_terms_condition)
+    
     membership.save()
     
     print("done -----")
