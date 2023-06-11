@@ -107,3 +107,8 @@ class MembershipView(View):
     print("done -----")
     
     return redirect('home')
+  
+
+
+  
+  
