@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,6 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
     <!-- /* add font awesome link*/ -->
     <link
@@ -38,6 +40,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
       rel="stylesheet"
     />
+
     <link
       href="{% static 'lib/flaticon/font/flaticon.css' %}"
       rel="stylesheet"
@@ -70,7 +73,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <script src="{% static '/static/js/script.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
 
@@ -84,8 +87,7 @@
     <div class="wrapper" id="content" style="display: none">
       <!-- header  -->
 
-      <!--
-       <div class=" wrapper">
+      <!-- <div class=" wrapper">
     <nav class="navbar" style="margin-bottom: 3px;">
       <div class="brand-title">
         <img class="img-logo" src="/images/logo/blue2.png" alt="" style="padding: 5px 5px;">
@@ -118,7 +120,7 @@
               <div class="logo">
                 <a href="index.html" class="logo-link">
                   <div class="logo-image">
-                    <img src="/images/llogo.png" alt="Logo" />
+                    <img src="/static/images/logo/llogo.png" alt="Logo" />
                   </div>
                   <h1 style="color: #00f">
                     Connect <span style="color: black">US</span>
@@ -169,6 +171,7 @@
       <!-- Top Bar End -->
 
       <!-- Nav Bar Start -->
+      {% comment %}
       <div class="custom-nav-bar">
         <div class="custom-container-fluid">
           <nav
@@ -219,33 +222,7 @@
           </nav>
         </div>
       </div>
-
-      <!-- Nav Bar End -->
-      <!-- home   -->
-      <!-- Slider section -->
-      <!-- <section class="categories" id="rooms" >
-      <div class="sliders">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="../images/Service Room/roomSlider1.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="../images/Service Room/roomSlider2.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="../images/Service Room/roomSlider3.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="../images/Service Room/roomSlider4.jpg" alt="">
-            </div>
-          </div>
-         
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-    </section> -->
+      {% endcomment %} {% include 'base/navbar.html' %}
 
       <div class="carousel slide" id="myCarousel" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -256,14 +233,14 @@
 
         <div class="carousel-inner">
           <div class="item active">
-            <img src="/images/Sliders/audi-rs-e-tron-gt.jpg" alt="" />
+            <img src="/static/images/Sliders/aston-martin.jpg" alt="" />
           </div>
 
           <div class="item">
-            <img src="/images/Sliders/aston-martin.jpg" alt="" />
+            <img src="/static/images/Sliders/audi-rs-e-tron-gt.jpg" alt="" />
           </div>
           <div class="item">
-            <img src="/images/Sliders/maserati-mc20.jpg" alt="" />
+            <img src="/static/images/Sliders/maserati-mc20.jpg" alt="" />
           </div>
         </div>
         <!-- Carousel nav -->
@@ -281,7 +258,7 @@
       <section class="about-section">
         <div class="about-content">
           <div class="about-image">
-            <img src="../images/logo/blue2.png" alt="About Image" />
+            <img src="/static/images/logo/blue2.png" alt="About Image" />
           </div>
           <div class="about-text">
             <h2 class="about-heading">About Us</h2>
@@ -294,22 +271,30 @@
               Aliquam in purus eget odio bibendum luctus. Fusce maximus
               venenatis magna, vitae convallis turpis suscipit at.
             </p>
-            <button class="event-button black-bg">Events</button>
-            <button class="service-button white-bg">Service</button>
+            <button class="event-button black-bg">
+              <a href="/template/events.html" style="text-decoration: none"
+                >Events</a
+              >
+            </button>
+            <button class="service-button white-bg">
+              <a href="/template/Services.html" style="text-decoration: none"
+                >Services</a
+              >
+            </button>
           </div>
         </div>
       </section>
 
       <section style="height: 450px">
-        <h3 style="color: #00f; text-align: center">Our Events 🗓️</h3>
+        <h3 style="color: #00f; text-align: center">Our Events</h3>
 
         <div id="carousel">
           <div class="hideLeft">
-            <img src="/images/Sliders/audi-rs-e-tron-gt.jpg" />
+            <img src="/static/images/Sliders/aston-martin.jpg" />
           </div>
 
           <div class="prevLeftSecond">
-            <img src="/images/Service Room/room3.jpeg" />
+            <img src="/static/images/Service Room/room3.jpeg" />
           </div>
 
           <div class="prev">
@@ -331,11 +316,11 @@
           </div>
 
           <div class="nextRightSecond">
-            <img src="/images/Service Room/room7.jpg" />
+            <img src="/static/images/Service Room/room7.jpg" />
           </div>
 
           <div class="hideRight">
-            <img src="/images/Service Room/room6.jpeg" />
+            <img src="/static/images/Service Room/room6.jpeg" />
           </div>
         </div>
         <div
@@ -347,8 +332,9 @@
             padding: 28px;
           "
         >
-          <button id="prev">👈🏼</button> &nbsp
-          <button id="next">👉🏼</button>
+          <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+          &nbsp
+          <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
       </section>
 
@@ -366,11 +352,11 @@
         />
 
         <div class="container">
-          <h2 style="color: #00f">Our Partners 🤝</h2>
-          <section class="customer-logos slider">
+          <h2 style="color: #00f">Our Partners</h2>
+          <div class="customer-logos">
             <div class="slide">
               <img
-                src="../images/Sponser/doruk-bayram-gs3duh5iqkw-unsplash.jpg"
+                src="/static/images/Sponser/doruk-bayram-gs3duh5iqkw-unsplash.jpg"
               />
             </div>
             <div class="slide">
@@ -390,7 +376,7 @@
             </div>
             <div class="slide">
               <img
-                src="../images/Sponser/tobias-roder-x60YFtdOsGU-unsplash.jpg"
+                src="/static/images/Sponser/tobias-roder-x60YFtdOsGU-unsplash.jpg"
               />
             </div>
             <div class="slide">
@@ -403,7 +389,7 @@
                 src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"
               />
             </div>
-          </section>
+          </div>
         </div>
       </section>
 

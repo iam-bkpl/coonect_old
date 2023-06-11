@@ -1,524 +1,467 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    {% include 'base/headCss.html' %} {% comment %}
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="/static/css/footer.css"> -->
+    <!-- /* add font awesome link*/ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Added 1 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
-  <!-- <link rel="stylesheet" href="/static/css/footer.css"> -->
-  <!-- /* add font awesome link*/ -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Added 1 -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+    <!-- CSS Libraries -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="lib/slick/slick.css" rel="stylesheet" />
+    <link href="lib/slick/slick-theme.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- CSS Libraries -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
-  <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
-  <link href="lib/animate/animate.min.css" rel="stylesheet" />
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-  <link href="lib/slick/slick.css" rel="stylesheet" />
-  <link href="lib/slick/slick-theme.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+    <!-- CSS Libraries -->
 
-  <!-- CSS Libraries -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/contact.css" />
 
-  <link rel="stylesheet" href="/static/css/style.css" />
-  <link rel="stylesheet" href="/static/css/contact.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="/static/css/nav2.css" />
 
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <link rel="stylesheet" href="/static/css/nav2.css" />
+    <!-- Added 1 till -->
 
-  <!-- Added 1 till -->
+    <link rel="stylesheet" href="/static/css/services.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="/static/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+  </head>
 
-  <link rel="stylesheet" href="/static/css/services.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <script src="/static/js/script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
+  <body>
+    <!-- header  -->
 
-<body>
-  <!-- header  -->
+    <div class="wrapper">
+      {% include 'base/topNav.html' %}
+      <!-- Top Bar End -->
 
-  <div class="wrapper">
-    <div class="top-bar">
-      <div class="container-fluid">
-        <div class="row align-items-center">
-          <div class="col-lg-4 col-md-12">
-            <div class="logo">
-              <a href="index.html" class="logo-link">
-                <div class="logo-image">
-                  <img src="/images/llogo.png" alt="Logo" />
-                </div>
-                <h1 style="color: #00f">
-                  Connect <span style="color: black">US</span>
-                </h1>
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-8 col-md-7 d-none d-lg-block">
-            <div class="row">
-              <div class="col-4">
-                <div class="top-bar-item">
-                  <div class="top-bar-icon">
-                    <i class="flaticon-calendar"></i>
-                  </div>
-                  <div class="top-bar-text">
-                    <h3>Opening Hour</h3>
-                    <p>Mon - Fri, 8:00 - 9:00</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="top-bar-item">
-                  <div class="top-bar-icon">
-                    <i class="flaticon-call"></i>
-                  </div>
-                  <div class="top-bar-text">
-                    <h3>Call Us</h3>
-                    <p>+012 345 6789</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="top-bar-item">
-                  <div class="top-bar-icon">
-                    <i class="flaticon-send-mail"></i>
-                  </div>
-                  <div class="top-bar-text">
-                    <h3>Email Us</h3>
-                    <p>info@example.com</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- Nav Bar Start -->
+      {% include 'base/navbar.html' %}
+      <!-- header ends -->
+      <div class="container-contact">
+        <h2 class="contact-h2">We would love to hear from you!</h2>
+        <div class="contact-info">
+          <p class="info-paragraph">
+            If you have any questions or comments about our programs and
+            services, please feel free to contact us using the information
+            below.<br /><br />
+            📞 Phone: {{contact.phone}} <br />
+            📩 Email: {{contact.email}}<br />
+            📌 Address: {{contact.address}} <br /><br />
+            If you would like to volunteer or donate to our organization, please
+            visit our Get Involved page for more information.<br /><br />
+            ⏱️ Our office hours are 10am - 5pm.<br /><br />
+            We do our best to respond to all inquiries within 1-2 business
+            days.<br /><br />
+            ⚠️ If you require immediate assistance or have an emergency, please
+            dial [Insert emergency phone number].
+          </p>
+          <p class="c">
+            Thank you for your support of our community services organization.
+            We look forward to hearing from you soon.
+          </p>
         </div>
       </div>
-    </div>
-    <!-- Top Bar End -->
 
-    <!-- Nav Bar Start -->
-    <div class="custom-nav-bar">
-      <div class="custom-container-fluid">
-        <nav class="custom-navbar custom-navbar-expand-lg custom-bg-dark custom-navbar-dark">
-          <button type="button" class="custom-navbar-toggler" id="customNavbarToggler">
-            <span class="custom-toggler-icon"><i class="fas fa-bars" style="padding-right: 6px"></i> Connect
-              US</span>
-          </button>
-          <div class="custom-collapse custom-navbar-collapse" id="customNavbarCollapse">
-            <div class="custom-navbar-nav">
-              <a href="./index.html" class="custom-nav-item custom-nav-link custom-active">Home</a>
-              <a href="./aboutUs.html" class="custom-nav-item custom-nav-link">About</a>
-              <a href="./events.html" class="custom-nav-item custom-nav-link">Event</a>
-
-              <a href="./Services.html" class="custom-nav-item custom-nav-link">Service</a>
-              <a href="./contact.html" class="custom-nav-item custom-nav-link">Contact</a>
-              <a href="./mem.html" class="custom-nav-item custom-nav-link custom-btn">Membership</a>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-
-    <!-- header ends -->
-    <div class="container-contact">
-      <h2 class="contact-h2">We would love to hear from you!</h2>
-      <div class="contact-info">
-        <p class="info-paragraph">
-          If you have any questions or comments about our programs and
-          services, please feel free to contact us using the information
-          below.<br /><br />
-          📞 Phone: [Insert phone number]<br />
-          📩 Email: [Insert email address]<br />
-          📌 Address: [Insert physical address]<br /><br />
-          If you would like to volunteer or donate to our organization, please
-          visit our Get Involved page for more information.<br /><br />
-          ⏱️ Our office hours are 10am - 5pm.<br /><br />
-          We do our best to respond to all inquiries within 1-2 business
-          days.<br /><br />
-          ⚠️ If you require immediate assistance or have an emergency, please
-          dial [Insert emergency phone number].
-        </p>
-        <p class="c">
-          Thank you for your support of our community services organization.
-          We look forward to hearing from you soon.
-        </p>
-      </div>
-    </div>
-
-    <!-- **************Latest Rooom************** -->
-    <section class="container mt-5">
-      <!--Contact heading-->
-      <div class="row">
-        <!-- <div class="col-sm-12 text-center mb-4">
+      <!-- **************Latest Rooom************** -->
+      <section class="container mt-5">
+        <!--Contact heading-->
+        <div class="row">
+          <!-- <div class="col-sm-12 text-center mb-4">
        <a class="btn btn-primary" target="_blank" href=""> Donate Now <i class="fa fa-dollar"></i></a>
      </div> -->
-        <!--Grid column-->
-        <div class="col-sm-12 mb-4 col-md-5">
-          <!--Form with header-->
-          <div class="card border-primary rounded-0">
-            <div class="card-header p-0">
-              <div class="text-white text-center py-2" style="background-color: #00f">
-                <h3><i class="fa fa-envelope"></i> Write to us:</h3>
-                <p class="m-0">
-                  We’ll write rarely, but only the best content.
+          <!--Grid column-->
+          <div class="col-sm-12 mb-4 col-md-5">
+            <!--Form with header-->
+            <div class="card border-primary rounded-0">
+              <div class="card-header p-0">
+                <div
+                  class="text-white text-center py-2"
+                  style="background-color: #00f"
+                >
+                  <h3><i class="fa fa-envelope"></i> Write to us:</h3>
+                  <p class="m-0">
+                    We’ll write rarely, but only the best content.
+                  </p>
+                </div>
+              </div>
+              <div class="card-body p-3">
+                <div class="form-group">
+                  <label> Your name </label>
+                  <div class="input-group">
+                    <input
+                      value=""
+                      type="text"
+                      name="data[name]"
+                      class="form-control"
+                      id="inlineFormInputGroupUsername"
+                      placeholder="Your name"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Your email</label>
+                  <div class="input-group mb-2 mb-sm-0">
+                    <input
+                      type="email"
+                      value=""
+                      name="data[email]"
+                      class="form-control"
+                      id="inlineFormInputGroupUsername"
+                      placeholder="Email"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Subject</label>
+                  <div class="input-group mb-2 mb-sm-0">
+                    <input
+                      type="text"
+                      name="data[subject]"
+                      class="form-control"
+                      id="inlineFormInputGroupUsername"
+                      placeholder="Subject"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Message</label>
+                  <div class="input-group mb-2 mb-sm-0">
+                    <input type="text" class="form-control" name="mesg" />
+                  </div>
+                </div>
+                <div class="text-center">
+                  <input
+                    type="submit"
+                    name="submit"
+                    value="Submit"
+                    class="custom-btn"
+                    style="background-color: #2868e6"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-sm-12 col-md-7">
+            <!--Google map-->
+            <div class="mb-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31713618736!2d85.28493299593472!3d27.70895425220037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1685196588425!5m2!1sen!2snp"
+                width="100%"
+                height="450"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+            <!--Buttons-->
+            <div class="row text-center">
+              <div class="col-md-4">
+                <a
+                  class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"
+                  ><i class="fa fa-map-marker"></i
+                ></a>
+                <p>Your Address …..</p>
+              </div>
+              <div class="col-md-4">
+                <a
+                  class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"
+                  ><i class="fa fa-phone"></i
+                ></a>
+                <p>+91- 90000000</p>
+              </div>
+              <div class="col-md-4">
+                <a
+                  class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"
+                  ><i class="fa fa-envelope"></i
+                ></a>
+                <p>your@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <!--Grid column-->
+        </div>
+      </section>
+
+    {% include 'base/partners.html' %}
+      <!-- footer section starts  -->
+      <div class="footer wow fadeIn" data-wow-delay="0.3s">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-contact">
+                <h2>Office Contact</h2>
+                <p>
+                  <i class="fa fa-map-marker-alt"></i>123 Street, New York, USA
                 </p>
+                <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope"></i>info@example.com</p>
+                <div class="footer-social">
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                  <a href=""><i class="fab fa-facebook-f"></i></a>
+                  <a href=""><i class="fab fa-youtube"></i></a>
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                  <a href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
               </div>
             </div>
-            <div class="card-body p-3">
-              <div class="form-group">
-                <label> Your name </label>
-                <div class="input-group">
-                  <input value="" type="text" name="data[name]" class="form-control" id="inlineFormInputGroupUsername"
-                    placeholder="Your name" />
-                </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-link">
+                <h2>Services Areas</h2>
+                <a href="">Tours and Travels </a>
+                <a href="">Passport renewal </a>
+                <a href="">Work Permit renewal </a>
+                <a href="">Attestation Guidance </a>
               </div>
-              <div class="form-group">
-                <label>Your email</label>
-                <div class="input-group mb-2 mb-sm-0">
-                  <input type="email" value="" name="data[email]" class="form-control" id="inlineFormInputGroupUsername"
-                    placeholder="Email" />
-                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-link">
+                <h2>Useful Pages</h2>
+                <a href="">Nepal Embassy in Dubai </a>
+                <a href="">Status of Tourist VISA</a>
               </div>
-              <div class="form-group">
-                <label>Subject</label>
-                <div class="input-group mb-2 mb-sm-0">
-                  <input type="text" name="data[subject]" class="form-control" id="inlineFormInputGroupUsername"
-                    placeholder="Subject" />
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="newsletter">
+                <h2>Newsletter</h2>
+                <p>Subscribe us</p>
+                <div class="form">
+                  <input class="form-control" placeholder="Email here" />
+                  <button class="btn">Submit</button>
                 </div>
-              </div>
-              <div class="form-group">
-                <label>Message</label>
-                <div class="input-group mb-2 mb-sm-0">
-                  <input type="text" class="form-control" name="mesg" />
-                </div>
-              </div>
-              <div class="text-center">
-                <input type="submit" name="submit" value="Submit" class="custom-btn" />
               </div>
             </div>
           </div>
         </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-sm-12 col-md-7">
-          <!--Google map-->
-          <div class="mb-4">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31713618736!2d85.28493299593472!3d27.70895425220037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1685196588425!5m2!1sen!2snp"
-              width="100%" height="450" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false"
-              tabindex="0"></iframe>
-          </div>
-          <!--Buttons-->
-          <div class="row text-center">
-            <div class="col-md-4">
-              <a class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"><i
-                  class="fa fa-map-marker"></i></a>
-              <p>Your Address …..</p>
-            </div>
-            <div class="col-md-4">
-              <a class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-phone"></i></a>
-              <p>+91- 90000000</p>
-            </div>
-            <div class="col-md-4">
-              <a class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"><i class="fa fa-envelope"></i></a>
-              <p>your@gmail.com</p>
-            </div>
+        <div class="container footer-menu">
+          <div class="f-menu">
+            <a href="">Terms of use</a>
+            <a href="">Privacy policy</a>
+            <a href="">Cookies</a>
           </div>
         </div>
-        <!--Grid column-->
-      </div>
-    </section>
-
-    <section>
-      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-
-      <div class="container">
-        <h2 style="color: #00f">Our Partners</h2>
-        <section class="customer-logos slider">
-          <div class="slide">
-            <img src="../images/Sponser/doruk-bayram-gs3duh5iqkw-unsplash.jpg" />
-          </div>
-          <div class="slide">
-            <img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg" />
-          </div>
-          <div class="slide">
-            <img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg" />
-          </div>
-          <div class="slide">
-            <img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg" />
-          </div>
-          <div class="slide">
-            <img src="../images/Sponser/tobias-roder-x60YFtdOsGU-unsplash.jpg" />
-          </div>
-          <div class="slide">
-            <img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg" />
-          </div>
-          <div class="slide">
-            <img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg" />
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <!-- footer section starts  -->
-    <div class="footer wow fadeIn" data-wow-delay="0.3s">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="footer-contact">
-              <h2>Office Contact</h2>
-              <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
-              <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-              <p><i class="fa fa-envelope"></i>info@example.com</p>
-              <div class="footer-social">
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-youtube"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fab fa-linkedin-in"></i></a>
-              </div>
+        <div class="container copyright">
+          <div class="row">
+            <div class="col-md-6">
+              <p>&copy; <a href="#">Connect Us</a>, All Right Reserved.</p>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="footer-link">
-              <h2>Services Areas</h2>
-              <a href="">Tours and Travels
-              </a>
-              <a href="">Passport renewal
-              </a>
-              <a href="">Work Permit renewal
-              </a>
-              <a href="">Attestation Guidance
-              </a>
-
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="footer-link">
-              <h2>Useful Pages</h2>
-              <a href="">Nepal Embassy in Dubai
-              </a>
-              <a href="">Status of Tourist VISA</a>
-
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="newsletter">
-              <h2>Newsletter</h2>
-              <p>
-                Subscribe us
-              </p>
-              <div class="form">
-                <input class="form-control" placeholder="Email here">
-                <button class="btn">Submit</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container footer-menu">
-        <div class="f-menu">
-          <a href="">Terms of use</a>
-          <a href="">Privacy policy</a>
-          <a href="">Cookies</a>
-
-        </div>
-      </div>
-      <div class="container copyright">
-        <div class="row">
-          <div class="col-md-6">
-            <p>&copy; <a href="#">Connect Us</a>, All Right Reserved.</p>
-          </div>
-          <div class="col-md-6">
-
+            <div class="col-md-6"></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
+    <!-- footer section ends -->
 
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-  <!-- footer section ends -->
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
 
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        autopaly: {
+          delay: 300,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script src="js/script.js"></script>
 
-  <!-- custom js file link  -->
-  <script src="js/script.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper(".swiper", {
-      autopaly: {
-        delay: 300,
-        disableOnInteraction: false,
-      },
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
-  <script src="js/script.js"></script>
-
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper(".swiper-container", {
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
-  <script>
-    $(document).ready(function () {
-      $(".customer-logos").slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 4,
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".customer-logos").slick({
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 1500,
+          arrows: false,
+          dots: false,
+          pauseOnHover: false,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 4,
+              },
             },
-          },
-          {
-            breakpoint: 520,
-            settings: {
-              slidesToShow: 3,
+            {
+              breakpoint: 520,
+              settings: {
+                slidesToShow: 3,
+              },
             },
-          },
-        ],
+          ],
+        });
       });
-    });
-  </script>
-  <script>
-    function slideCarousel() {
-      const carouselContainer = document.querySelector(
-        ".carousel-container-4"
-      );
-      const carousel = carouselContainer.querySelector(".carousel");
-      const slides = carousel.querySelectorAll(".slide");
-      const slideWidth = slides[0].offsetWidth;
-      let currentPosition = 0;
+    </script>
+    <script>
+      function slideCarousel() {
+        const carouselContainer = document.querySelector(
+          ".carousel-container-4"
+        );
+        const carousel = carouselContainer.querySelector(".carousel");
+        const slides = carousel.querySelectorAll(".slide");
+        const slideWidth = slides[0].offsetWidth;
+        let currentPosition = 0;
 
-      carousel.style.transform = `translateX(${currentPosition}px)`;
+        carousel.style.transform = `translateX(${currentPosition}px)`;
 
-      function nextSlide() {
-        if (currentPosition > -(slideWidth * (slides.length - 4))) {
-          currentPosition -= slideWidth;
-          carousel.style.transform = `translateX(${currentPosition}px)`;
+        function nextSlide() {
+          if (currentPosition > -(slideWidth * (slides.length - 4))) {
+            currentPosition -= slideWidth;
+            carousel.style.transform = `translateX(${currentPosition}px)`;
+          }
+        }
+
+        function prevSlide() {
+          if (currentPosition !== 0) {
+            currentPosition += slideWidth;
+            carousel.style.transform = `translateX(${currentPosition}px)`;
+          }
+        }
+
+        carouselContainer.addEventListener("mouseenter", () => {
+          carouselContainer.addEventListener("mousemove", handleMouseMove);
+        });
+
+        carouselContainer.addEventListener("mouseleave", () => {
+          carouselContainer.removeEventListener("mousemove", handleMouseMove);
+        });
+
+        function handleMouseMove(event) {
+          const containerWidth = carouselContainer.offsetWidth;
+          const containerCenter = containerWidth / 2;
+          const mousePosition =
+            event.clientX - carouselContainer.getBoundingClientRect().left;
+
+          if (mousePosition < containerCenter && currentPosition !== 0) {
+            prevSlide();
+          } else if (
+            mousePosition > containerCenter &&
+            currentPosition > -(slideWidth * (slides.length - 4))
+          ) {
+            nextSlide();
+          }
         }
       }
 
-      function prevSlide() {
-        if (currentPosition !== 0) {
-          currentPosition += slideWidth;
-          carousel.style.transform = `translateX(${currentPosition}px)`;
+      slideCarousel();
+    </script>
+
+    <script>
+      // Get a reference to the button element
+      var button = document.getElementById("button");
+
+      // Add an onclick event listener to the button
+      button.addEventListener("click", function () {
+        // Redirect to mem.html
+        window.location.href = "mem.html";
+      });
+    </script>
+
+    <script>
+      function toggleNavbarToggler() {
+        const navbarToggler = document.getElementById("customNavbarToggler");
+        const navbarCollapse = document.querySelector(
+          ".custom-navbar-collapse"
+        );
+
+        if (window.innerWidth >= 992) {
+          navbarToggler.classList.add("hide-on-big-screens");
+          navbarCollapse.classList.remove("collapsed"); // Expand the menu on big screens
+        } else {
+          navbarToggler.classList.remove("hide-on-big-screens");
+          navbarCollapse.classList.add("collapsed"); // Collapse the menu on small screens
         }
       }
 
-      carouselContainer.addEventListener("mouseenter", () => {
-        carouselContainer.addEventListener("mousemove", handleMouseMove);
+      window.addEventListener("load", toggleNavbarToggler);
+      window.addEventListener("resize", toggleNavbarToggler);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var toggler = document.querySelector(".custom-navbar-toggler");
+        var navbarCollapse = document.querySelector(".custom-navbar-collapse");
+
+        toggler.addEventListener("click", function () {
+          navbarCollapse.classList.toggle("collapsed");
+        });
+
+        toggleNavbarToggler(); // Call the function when the DOM content is loaded
       });
-
-      carouselContainer.addEventListener("mouseleave", () => {
-        carouselContainer.removeEventListener("mousemove", handleMouseMove);
-      });
-
-      function handleMouseMove(event) {
-        const containerWidth = carouselContainer.offsetWidth;
-        const containerCenter = containerWidth / 2;
-        const mousePosition =
-          event.clientX - carouselContainer.getBoundingClientRect().left;
-
-        if (mousePosition < containerCenter && currentPosition !== 0) {
-          prevSlide();
-        } else if (
-          mousePosition > containerCenter &&
-          currentPosition > -(slideWidth * (slides.length - 4))
-        ) {
-          nextSlide();
-        }
-      }
-    }
-
-    slideCarousel();
-  </script>
-
-  <script>
-    // Get a reference to the button element
-    var button = document.getElementById("button");
-
-    // Add an onclick event listener to the button
-    button.addEventListener("click", function () {
-      // Redirect to mem.html
-      window.location.href = "mem.html";
-    });
-  </script>
-
-  <script>
-    function toggleNavbarToggler() {
-      const navbarToggler = document.getElementById('customNavbarToggler');
-      const navbarCollapse = document.querySelector('.custom-navbar-collapse');
-
-      if (window.innerWidth >= 992) {
-        navbarToggler.classList.add('hide-on-big-screens');
-        navbarCollapse.classList.remove('collapsed'); // Expand the menu on big screens
-      } else {
-        navbarToggler.classList.remove('hide-on-big-screens');
-        navbarCollapse.classList.add('collapsed'); // Collapse the menu on small screens
-      }
-    }
-
-    window.addEventListener('load', toggleNavbarToggler);
-    window.addEventListener('resize', toggleNavbarToggler);
-
-    document.addEventListener('DOMContentLoaded', function () {
-      var toggler = document.querySelector('.custom-navbar-toggler');
-      var navbarCollapse = document.querySelector('.custom-navbar-collapse');
-
-      toggler.addEventListener('click', function () {
-        navbarCollapse.classList.toggle('collapsed');
-      });
-
-      toggleNavbarToggler(); // Call the function when the DOM content is loaded
-    });
-  </script>
-
-</body>
-
+    </script>
+  </body>
 </html>

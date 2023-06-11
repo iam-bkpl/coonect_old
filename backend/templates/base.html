@@ -1,0 +1,229 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <!-- /* add font awesome link*/ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Added 1 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Libraries -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="{% static 'lib/flaticon/font/flaticon.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'lib/lightbox/css/lightbox.min.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet" />
+    <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Libraries -->
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav2.css' %}" />
+
+    <!-- Added 1 till -->
+
+    <link rel="stylesheet" href="{% static 'css/services.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    {% comment %} <div id="loader">
+      <div class="neumorphic-card">
+        <span class="welcome-message">Your Welcome !</span>
+      </div>
+    </div> {% endcomment %}
+
+    <div class="wrapper" id="content" style="display: none">
+      <!-- header  -->
+
+      <!-- <div class=" wrapper">
+    <nav class="navbar" style="margin-bottom: 3px;">
+      <div class="brand-title">
+        <img class="img-logo" src="/images/logo/blue2.png" alt="" style="padding: 5px 5px;">
+      </div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="/template/index.html">Home</a></li>
+          <li><a href="/template/aboutUs.html">About Us</a></li>
+          <li><a href="/template/Services.html">Service</a></li>
+          <li><a href="/template/events.html">Event</a></li>
+          <li><a href="/template/contact.html">Contact</a></li>
+          <button type="button" id="button" class="nav-btnn">Membership <i class="fa-solid fa-ticket"></i></button>
+        </ul>
+      </div>
+    </nav>
+  </div> -->
+
+      <!-- header ends -->
+
+      <!-- Top Bar Start -->
+      <div class="top-bar">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-lg-4 col-md-12">
+              <div class="logo">
+                <a href="index.html" class="logo-link">
+                  <div class="logo-image">
+                    <img src="/static/images/logo/llogo.png" alt="Logo" />
+                  </div>
+                  <h1 style="color: #00f">
+                    Connect <span style="color: black">US</span>
+                  </h1>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-7 d-none d-lg-block">
+              <div class="row">
+                <div class="col-4">
+                  <div class="top-bar-item">
+                    <div class="top-bar-icon">
+                      <i class="flaticon-calendar"></i>
+                    </div>
+                    <div class="top-bar-text">
+                      <h3>Opening Hour</h3>
+                      <p>Mon - Fri, 8:00 - 9:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="top-bar-item">
+                    <div class="top-bar-icon">
+                      <i class="flaticon-call"></i>
+                    </div>
+                    <div class="top-bar-text">
+                      <h3>Call Us</h3>
+                      <p>+012 345 6789</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="top-bar-item">
+                    <div class="top-bar-icon">
+                      <i class="flaticon-send-mail"></i>
+                    </div>
+                    <div class="top-bar-text">
+                      <h3>Email Us</h3>
+                      <p>info@example.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Top Bar End -->
+
+      <!-- Nav Bar Start -->
+      <div class="custom-nav-bar">
+        <div class="custom-container-fluid">
+          <nav
+            class="custom-navbar custom-navbar-expand-lg custom-bg-dark custom-navbar-dark"
+          >
+            <button
+              type="button"
+              class="custom-navbar-toggler"
+              id="customNavbarToggler"
+            >
+              <span class="custom-toggler-icon"
+                ><i class="fas fa-bars" style="padding-right: 6px"></i> Connect
+                US</span
+              >
+            </button>
+            <div
+              class="custom-collapse custom-navbar-collapse"
+              id="customNavbarCollapse"
+            >
+              <div class="custom-navbar-nav">
+                <a
+                  href="./index.html"
+                  class="custom-nav-item custom-nav-link custom-active"
+                  >Home</a
+                >
+                <a href="./aboutUs.html" class="custom-nav-item custom-nav-link"
+                  >About</a
+                >
+                <a href="./events.html" class="custom-nav-item custom-nav-link"
+                  >Event</a
+                >
+
+                <a
+                  href="./Services.html"
+                  class="custom-nav-item custom-nav-link"
+                  >Service</a
+                >
+                <a href="./contact.html" class="custom-nav-item custom-nav-link"
+                  >Contact</a
+                >
+                <a
+                  href="./mem.html"
+                  class="custom-nav-item custom-nav-link custom-btn"
+                  >Membership</a
+                >
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+
+{% block content %} 
+
+
+{% endblock content %}
+</body>
+</html>

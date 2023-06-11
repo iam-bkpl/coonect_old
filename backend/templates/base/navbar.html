@@ -1,0 +1,54 @@
+{% load static %}
+<!-- Nav Bar Start -->
+<div class="custom-nav-bar">
+  <div class="custom-container-fluid">
+    <nav
+      class="custom-navbar custom-navbar-expand-lg custom-bg-dark custom-navbar-dark"
+    >
+      <button
+        type="button"
+        class="custom-navbar-toggler"
+        id="customNavbarToggler"
+      >
+        <span class="custom-toggler-icon" style="color: aliceblue"
+          ><i class="fas fa-bars" style="padding-right: 6px"></i> Connect
+          US</span
+        >
+      </button>
+      <div
+        class="custom-collapse custom-navbar-collapse"
+        id="customNavbarCollapse"
+      >
+        <div class="custom-navbar-nav">
+          <a href="/" class="custom-nav-item custom-nav-link custom-active"
+            >Home</a
+          >
+          <a
+            href=" {% url 'aboutus' %} "
+            class="custom-nav-item custom-nav-link"
+            >About</a
+          >
+          <a href=" {% url 'event' %} " class="custom-nav-item custom-nav-link"
+            >Event</a
+          >
+
+          <a
+            href=" {% url 'service' %} "
+            class="custom-nav-item custom-nav-link"
+            >Service</a
+          >
+          <a
+            href=" {% url 'contact' %} "
+            class="custom-nav-item custom-nav-link"
+            >Contact</a
+          >
+          <a
+            href=" {% url 'membership' %} "
+            class="custom-nav-item custom-nav-link custom-btn"
+            >Membership</a
+          >
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

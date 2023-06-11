@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+{% load static %} <!DOCTYPE html>
 <html lang="en">
-
-<!-- <head>
+  <!-- <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,110 +51,139 @@
 
 </head>  -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link rel="stylesheet" href="/static/css/footer.css">
-  <!-- /* add font awesome link*/ -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Added 1 -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+    {% include 'base/headCss.html' %} {% comment %}
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <!-- /* add font awesome link*/ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Added 1 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- CSS Libraries -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-  <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-  <link href="lib/slick/slick.css" rel="stylesheet">
-  <link href="lib/slick/slick-theme.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'lib/flaticon/font/flaticon.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'lib/lightbox/css/lightbox.min.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'lib/slick/slick.css' %}" rel="stylesheet" />
+    <link href="{% static 'lib/slick/slick-theme.css' %}" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="{% static 'css/aboutus.css' %}" />
 
-  <!-- CSS Libraries -->
-  <link rel="stylesheet" href="/static/css/aboutus.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nav2.css' %}" />
 
-  <link rel="stylesheet" href="/static/css/style.css">
-  <link rel="stylesheet" href="/static/css/nav2.css">
+    <!-- Added 1 till -->
 
+    <link rel="stylesheet" href="{% static 'css/services.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% endcomment %}
+  </head>
 
-  <!-- Added 1 till -->
+  <body>
+    <!-- header  -->
 
-
-  <link rel="stylesheet" href="/static/css/services.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-
-  <script src="/static/js/script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-
-
-
-
-</head>
-
-<body>
-
-  <!-- header  -->
-
-  <div class="wrapper">
-    <div class="top-bar">
-      <div class="container-fluid">
-        <div class="row align-items-center">
-          <div class="col-lg-4 col-md-12">
-            <div class="logo">
-              <a href="index.html" class="logo-link">
-                <div class="logo-image">
-                  <img src="/images/llogo.png" alt="Logo">
-                </div>
-                <h1 style="color: #00f;">Connect <span style="color: black;">US</span></h1>
-              </a>
+    <div class="wrapper">
+      <div class="top-bar">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-lg-4 col-md-12">
+              <div class="logo">
+                <a href="index.html" class="logo-link">
+                  <div class="logo-image">
+                    <img src="/static/images/logo/llogo.png" alt="Logo" />
+                  </div>
+                  <h1 style="color: #00f">
+                    Connect <span style="color: black">US</span>
+                  </h1>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-8 col-md-7 d-none d-lg-block">
-            <div class="row">
-              <div class="col-4">
-                <div class="top-bar-item">
-                  <div class="top-bar-icon">
-                    <i class="flaticon-calendar"></i>
-                  </div>
-                  <div class="top-bar-text">
-                    <h3>Opening Hour</h3>
-                    <p>Mon - Fri, 8:00 - 9:00</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="top-bar-item">
-                  <div class="top-bar-icon">
-                    <i class="flaticon-call"></i>
-                  </div>
-                  <div class="top-bar-text">
-                    <h3>Call Us</h3>
-                    <p>+012 345 6789</p>
+            <div class="col-lg-8 col-md-7 d-none d-lg-block">
+              <div class="row">
+                <div class="col-4">
+                  <div class="top-bar-item">
+                    <div class="top-bar-icon">
+                      <i class="flaticon-calendar"></i>
+                    </div>
+                    <div class="top-bar-text">
+                      <h3>Opening Hour</h3>
+                      <p>Mon - Fri, 8:00 - 9:00</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-4">
-                <div class="top-bar-item">
-                  <div class="top-bar-icon">
-                    <i class="flaticon-send-mail"></i>
+                <div class="col-4">
+                  <div class="top-bar-item">
+                    <div class="top-bar-icon">
+                      <i class="flaticon-call"></i>
+                    </div>
+                    <div class="top-bar-text">
+                      <h3>Call Us</h3>
+                      <p>+012 345 6789</p>
+                    </div>
                   </div>
-                  <div class="top-bar-text">
-                    <h3>Email Us</h3>
-                    <p>info@example.com</p>
+                </div>
+                <div class="col-4">
+                  <div class="top-bar-item">
+                    <div class="top-bar-icon">
+                      <i class="flaticon-send-mail"></i>
+                    </div>
+                    <div class="top-bar-text">
+                      <h3>Email Us</h3>
+                      <p>info@example.com</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -163,409 +191,385 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- Top Bar End -->
+      <!-- Top Bar End -->
 
-    <!-- Nav Bar Start -->
-    <div class="custom-nav-bar">
-      <div class="custom-container-fluid">
-        <nav class="custom-navbar custom-navbar-expand-lg custom-bg-dark custom-navbar-dark">
-          <button type="button" class="custom-navbar-toggler" id="customNavbarToggler">
-            <span class="custom-toggler-icon"><i class="fas fa-bars" style="padding-right: 6px;"></i> Connect US</span>
-          </button>
-          <div class="custom-collapse custom-navbar-collapse" id="customNavbarCollapse">
-            <div class="custom-navbar-nav">
-              <a href="./index.html" class="custom-nav-item custom-nav-link custom-active">Home</a>
-              <a href="./aboutUs.html" class="custom-nav-item custom-nav-link">About</a>
-              <a href="./events.html" class="custom-nav-item custom-nav-link">Event</a>
+      <!-- Nav Bar Start -->
+      {% comment %}
+      <div class="custom-nav-bar">
+        <div class="custom-container-fluid">
+          <nav
+            class="custom-navbar custom-navbar-expand-lg custom-bg-dark custom-navbar-dark"
+          >
+            <button
+              type="button"
+              class="custom-navbar-toggler"
+              id="customNavbarToggler"
+            >
+              <span class="custom-toggler-icon"
+                ><i class="fas fa-bars" style="padding-right: 6px"></i> Connect
+                US</span
+              >
+            </button>
+            <div
+              class="custom-collapse custom-navbar-collapse"
+              id="customNavbarCollapse"
+            >
+              <div class="custom-navbar-nav">
+                <a
+                  href="./index.html"
+                  class="custom-nav-item custom-nav-link custom-active"
+                  >Home</a
+                >
+                <a href="./aboutUs.html" class="custom-nav-item custom-nav-link"
+                  >About</a
+                >
+                <a href="./events.html" class="custom-nav-item custom-nav-link"
+                  >Event</a
+                >
 
-              <a href="./Services.html" class="custom-nav-item custom-nav-link">Service</a>
-              <a href="./contact.html" class="custom-nav-item custom-nav-link">Contact</a>
-              <a href="./mem.html" class="custom-nav-item custom-nav-link custom-btn">Membership</a>
+                <a
+                  href="./Services.html"
+                  class="custom-nav-item custom-nav-link"
+                  >Service</a
+                >
+                <a href="./contact.html" class="custom-nav-item custom-nav-link"
+                  >Contact</a
+                >
+                <a
+                  href="./mem.html"
+                  class="custom-nav-item custom-nav-link custom-btn"
+                  >Membership</a
+                >
+              </div>
             </div>
-          </div>
-
-        </nav>
-      </div>
-    </div>
-
-    <!-- header ends -->
-
-    <section class="about-section">
-      <div class="about-content">
-        <div class="about-image">
-          <img src="../images/logo/blue2.png" alt="About Image" />
-        </div>
-        <div class="about-text">
-          <h2 class="about-heading">About Us</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dignissim arcu in turpis luctus, at varius
-            erat cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce
-            at
-            diam eu metus auctor interdum at sed mauris. Integer in tellus et elit iaculis tristique sed eu nisi.
-            Aliquam
-            in purus eget odio bibendum luctus. Fusce maximus venenatis magna, vitae convallis turpis suscipit at.</p>
-        </div>
-
-      </div>
-
-    </section>
-
-    <section>
-      <div class="container">
-        <h2>Our Team</h2>
-        <div class="row vh-65">
-          <div class="col-sm-6 col-lg-6 my-auto">
-            <div class="box shadow-sm p-4">
-              <div class="image-wrapper mb-3">
-                <img class="img-fluid" src="../images/hancy2.png" alt="..." />
-              </div>
-              <div class="box-desc">
-                <h5>Hancy Bro</h5>
-                <p>FrontEnd Developer</p>
-              </div>
-              <ul class="social">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-6 my-auto">
-            <div class="box shadow-sm p-4">
-              <div class="image-wrapper mb-3">
-                <img class="img-fluid" src="../images/hancy.png" alt="..." />
-              </div>
-              <div class="box-desc">
-                <h5>Next Hancy</h5>
-                <p>FrontEnd Developer</p>
-              </div>
-              <ul class="social">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-            </div>
-          </div>
-
-
+          </nav>
         </div>
       </div>
+      {% endcomment %} {% include 'base/navbar.html' %}
+      <!-- header ends -->
+      {% block content %}
+      <section class="about-section">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="{{about.image.url}}" alt="About Image" />
+          </div>
+          <div class="about-text">
+            <h2 class="about-heading">About Us</h2>
+            <p>{{about.text}}</p>
+          </div>
+        </div>
+      </section>
 
-    </section>
+      <section>
+        <div class="container">
+          <h2>Our Team</h2>
 
-    <div class="container mt-2">
-      <h2 style="color: #00f;">Our Services</h2>
-      <!--   <div class="card card-block mb-2">
+          <div class="row vh-65">
+            {% for team in teams %}
+            <div class="col-sm-6 col-lg-6 my-auto">
+              <div class="box shadow-sm p-4">
+                <div class="image-wrapper mb-3">
+                  <img
+                    class="img-fluid"
+                    src="{{team.image.url}}"
+                    alt="{{team.name}} image "
+                  />
+                </div>
+                <div class="box-desc">
+                  <h5>{{team.name}}</h5>
+                  <p>{{team.position}}</p>
+                </div>
+                <ul class="social">
+                  <li>
+                    <a href="{{team.facebook_link}} "
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="{{team.instagram_link}}"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="{{team.linkedin_link}} "
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <div class="container mt-2">
+        <h2 style="color: #00f">Our Services</h2>
+        <!--   <div class="card card-block mb-2">
           <h4 class="card-title">Card 1</h4>
           <p class="card-text">Welcom to bootstrap card styles</p>
           <a href="#" class="btn btn-primary">Submit</a>
         </div>   -->
-      <div class="row">
-
-        <div class="col-md-3 col-sm-6 item">
-          <div class="card item-card card-block">
-            <h4 class="item-card-title text-right">
-              <i class="fa-brands fa-servicestack"></i>
-            </h4>
-            <img src="https://static.pexels.com/photos/7357/startup-photos.jpg" alt="Photo of sunset">
-            <h5 class="card-title px-3 py-1 mt-3 mb-3">ProVyuh</h5>
-            <p class="card-text px-3 py-1">This is a company that builds websites, web .</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 item">
-          <div class="card item-card card-block">
-            <h4 class="item-card-title text-right">
-              <i class="fa-brands fa-servicestack"></i>
-            </h4>
-            <img src="https://static.pexels.com/photos/262550/pexels-photo-262550.jpeg" alt="Photo of sunset">
-            <h5 class="card-title px-3 py-1  mt-3 mb-3">ProVyuh</h5>
-            <p class="card-text px-3 py-1">This is a company that builds websites, web apps and e-commerce solutions.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 item">
-          <div class="card item-card card-block">
-            <h4 class="item-card-title text-right">
-              <i class="fa-brands fa-servicestack"></i>
-            </h4>
-            <img src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg" alt="Photo of sunset">
-            <h5 class="card-title px-3 py-1 mt-3 mb-3">ProVyuh</h5>
-            <p class="card-text px-3 py-1">This is a company that builds websites, web apps and e-commerce solutions.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 item">
-          <div class="card item-card card-block">
-            <h4 class="item-card-title text-right">
-              <i class="fa-brands fa-servicestack"></i>
-            </h4>
-            <img src="https://static.pexels.com/photos/326424/pexels-photo-326424.jpeg" alt="Photo of sunset">
-            <h5 class="card-title  px-3 py-1 mt-3 mb-3">ProVyuh</h5>
-            <p class="card-text px-3 py-1">This is a company that builds websites, web apps and e-commerce solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-
-
-    <section>
-      <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-  
-      <div class="container">
-        <h2 style="color: #00f;">Our Partners 🤝</h2>
-        <section class="customer-logos slider">
-          <div class="slide"><img src="../images/Sponser/doruk-bayram-gs3duh5iqkw-unsplash.jpg"></div>
-          <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
-          <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
-          <div class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg">
-          </div>
-          <div class="slide"><img src="../images/Sponser/tobias-roder-x60YFtdOsGU-unsplash.jpg"></div>
-          <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg">
-          </div>
-          <div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg">
-          </div>
-  
-        </section>
-      </div>
-    </section>
-
-
-
-
-    <!-- footer section starts  -->
-
-    <!-- footer section starts  -->
-    <div class="footer wow fadeIn" data-wow-delay="0.3s">
-      <div class="container">
         <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="footer-contact">
-              <h2>Office Contact</h2>
-              <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
-              <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-              <p><i class="fa fa-envelope"></i>info@example.com</p>
-              <div class="footer-social">
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-youtube"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fab fa-linkedin-in"></i></a>
+          {% for service in services %}
+          <div class="col-md-3 col-sm-6 item">
+            <div class="card item-card card-block">
+              <h4 class="item-card-title text-right">
+                <i class="fa-brands fa-servicestack"></i>
+              </h4>
+              <img src="{{service.image.url}} " alt="Photo of sunset" />
+              <h5 class="card-title px-3 py-1 mt-3 mb-3">{{service.name}}</h5>
+              <p class="card-text px-3 py-1">{{service.text}}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% include 'base/partners.html' %}
+      {% comment %} <section>
+        <script
+          src="https://code.jquery.com/jquery-2.2.0.min.js"
+          type="text/javascript"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <link
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+
+        <div class="container">
+          <h2 style="color: #00f">Our Partners 🤝</h2>
+          <section class="customer-logos slider">
+            {% for partner in partners %}
+            <div class="slide">
+              <img src="{{partner.image.url}}" />
+            </div>
+            {% endfor %}
+          </section>
+        </div>
+      </section> {% endcomment %}
+
+      <!-- footer section starts  -->
+
+      <!-- footer section starts  -->
+      <div class="footer wow fadeIn" data-wow-delay="0.3s">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-contact">
+                <h2>Office Contact</h2>
+                <p>
+                  <i class="fa fa-map-marker-alt"></i>123 Street, New York, USA
+                </p>
+                <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope"></i>info@example.com</p>
+                <div class="footer-social">
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                  <a href=""><i class="fab fa-facebook-f"></i></a>
+                  <a href=""><i class="fab fa-youtube"></i></a>
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                  <a href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="footer-link">
-              <h2>Services Areas</h2>
-              <a href="">Tours and Travels
-              </a>
-              <a href="">Passport renewal
-              </a>
-              <a href="">Work Permit renewal
-              </a>
-              <a href="">Attestation Guidance
-              </a>
-            
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-link">
+                <h2>Services Areas</h2>
+                <a href="">Tours and Travels </a>
+                <a href="">Passport renewal </a>
+                <a href="">Work Permit renewal </a>
+                <a href="">Attestation Guidance </a>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="footer-link">
-              <h2>Useful Pages</h2>
-              <a href="">Nepal Embassy in Dubai
-              </a>
-              <a href="">Status of Tourist VISA</a>
-             
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-link">
+                <h2>Useful Pages</h2>
+                <a href="">Nepal Embassy in Dubai </a>
+                <a href="">Status of Tourist VISA</a>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="newsletter">
-              <h2>Newsletter</h2>
-              <p>
-                Subscribe us
-              </p>
-              <div class="form">
-                <input class="form-control" placeholder="Email here">
-                <button class="btn">Submit</button>
+            <div class="col-md-6 col-lg-3">
+              <div class="newsletter">
+                <h2>Newsletter</h2>
+                <p>Subscribe us</p>
+                <div class="form">
+                  <input class="form-control" placeholder="Email here" />
+                  <button class="btn">Submit</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container footer-menu">
-        <div class="f-menu">
-          <a href="">Terms of use</a>
-          <a href="">Privacy policy</a>
-          <a href="">Cookies</a>
-         
-        </div>
-      </div>
-      <div class="container copyright">
-        <div class="row">
-          <div class="col-md-6">
-            <p>&copy; <a href="#">Connect Us</a>, All Right Reserved.</p>
+        <div class="container footer-menu">
+          <div class="f-menu">
+            <a href="">Terms of use</a>
+            <a href="">Privacy policy</a>
+            <a href="">Cookies</a>
           </div>
-          <div class="col-md-6">
-            
+        </div>
+        <div class="container copyright">
+          <div class="row">
+            <div class="col-md-6">
+              <p>&copy; <a href="#">Connect Us</a>, All Right Reserved.</p>
+            </div>
+            <div class="col-md-6"></div>
           </div>
         </div>
       </div>
     </div>
-    </div>
-  
-  
 
+    <!-- footer section ends -->
 
-  <!-- footer section ends -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- custom js file link  -->
+    <script src="{% static 'js/script.js' %}"></script>
 
-  <!-- custom js file link  -->
-  <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 
-  <script src="js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".customer-logos").slick({
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 1500,
+          arrows: false,
+          dots: false,
+          pauseOnHover: false,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 4,
+              },
+            },
+            {
+              breakpoint: 520,
+              settings: {
+                slidesToShow: 3,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+    <script>
+      function slideCarousel() {
+        const carouselContainer = document.querySelector(
+          ".carousel-container-4"
+        );
+        const carousel = carouselContainer.querySelector(".carousel");
+        const slides = carousel.querySelectorAll(".slide");
+        const slideWidth = slides[0].offsetWidth;
+        let currentPosition = 0;
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
-  <script>
-    $(document).ready(function () {
-      $('.customer-logos').slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [{
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 4
+        carousel.style.transform = `translateX(${currentPosition}px)`;
+
+        function nextSlide() {
+          if (currentPosition > -(slideWidth * (slides.length - 4))) {
+            currentPosition -= slideWidth;
+            carousel.style.transform = `translateX(${currentPosition}px)`;
           }
-        }, {
-          breakpoint: 520,
-          settings: {
-            slidesToShow: 3
+        }
+
+        function prevSlide() {
+          if (currentPosition !== 0) {
+            currentPosition += slideWidth;
+            carousel.style.transform = `translateX(${currentPosition}px)`;
           }
-        }]
-      });
-    });
-  </script>
-  <script>
-    function slideCarousel() {
-      const carouselContainer = document.querySelector('.carousel-container-4');
-      const carousel = carouselContainer.querySelector('.carousel');
-      const slides = carousel.querySelectorAll('.slide');
-      const slideWidth = slides[0].offsetWidth;
-      let currentPosition = 0;
+        }
 
-      carousel.style.transform = `translateX(${currentPosition}px)`;
+        carouselContainer.addEventListener("mouseenter", () => {
+          carouselContainer.addEventListener("mousemove", handleMouseMove);
+        });
 
-      function nextSlide() {
-        if (currentPosition > -(slideWidth * (slides.length - 4))) {
-          currentPosition -= slideWidth;
-          carousel.style.transform = `translateX(${currentPosition}px)`;
+        carouselContainer.addEventListener("mouseleave", () => {
+          carouselContainer.removeEventListener("mousemove", handleMouseMove);
+        });
+
+        function handleMouseMove(event) {
+          const containerWidth = carouselContainer.offsetWidth;
+          const containerCenter = containerWidth / 2;
+          const mousePosition =
+            event.clientX - carouselContainer.getBoundingClientRect().left;
+
+          if (mousePosition < containerCenter && currentPosition !== 0) {
+            prevSlide();
+          } else if (
+            mousePosition > containerCenter &&
+            currentPosition > -(slideWidth * (slides.length - 4))
+          ) {
+            nextSlide();
+          }
         }
       }
 
-      function prevSlide() {
-        if (currentPosition !== 0) {
-          currentPosition += slideWidth;
-          carousel.style.transform = `translateX(${currentPosition}px)`;
+      slideCarousel();
+    </script>
+
+    <script>
+      // Get a reference to the button element
+      var button = document.getElementById("button");
+
+      // Add an onclick event listener to the button
+      button.addEventListener("click", function () {
+        // Redirect to mem.html
+        window.location.href = "mem.html";
+      });
+    </script>
+    <script>
+      function toggleNavbarToggler() {
+        const navbarToggler = document.getElementById("customNavbarToggler");
+        const navbarCollapse = document.querySelector(
+          ".custom-navbar-collapse"
+        );
+
+        if (window.innerWidth >= 992) {
+          navbarToggler.classList.add("hide-on-big-screens");
+          navbarCollapse.classList.remove("collapsed"); // Expand the menu on big screens
+        } else {
+          navbarToggler.classList.remove("hide-on-big-screens");
+          navbarCollapse.classList.add("collapsed"); // Collapse the menu on small screens
         }
       }
 
-      carouselContainer.addEventListener('mouseenter', () => {
-        carouselContainer.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener("load", toggleNavbarToggler);
+      window.addEventListener("resize", toggleNavbarToggler);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var toggler = document.querySelector(".custom-navbar-toggler");
+        var navbarCollapse = document.querySelector(".custom-navbar-collapse");
+
+        toggler.addEventListener("click", function () {
+          navbarCollapse.classList.toggle("collapsed");
+        });
+
+        toggleNavbarToggler(); // Call the function when the DOM content is loaded
       });
-
-      carouselContainer.addEventListener('mouseleave', () => {
-        carouselContainer.removeEventListener('mousemove', handleMouseMove);
-      });
-
-      function handleMouseMove(event) {
-        const containerWidth = carouselContainer.offsetWidth;
-        const containerCenter = containerWidth / 2;
-        const mousePosition = event.clientX - carouselContainer.getBoundingClientRect().left;
-
-        if (mousePosition < containerCenter && currentPosition !== 0) {
-          prevSlide();
-        } else if (mousePosition > containerCenter && currentPosition > -(slideWidth * (slides.length - 4))) {
-          nextSlide();
-        }
-      }
-    }
-
-    slideCarousel();
-
-  </script>
-
-  <script>
-    // Get a reference to the button element
-    var button = document.getElementById("button");
-
-    // Add an onclick event listener to the button
-    button.addEventListener("click", function () {
-      // Redirect to mem.html
-      window.location.href = "mem.html";
-    });
-  </script>
-<script>
-  function toggleNavbarToggler() {
-    const navbarToggler = document.getElementById('customNavbarToggler');
-    const navbarCollapse = document.querySelector('.custom-navbar-collapse');
-
-    if (window.innerWidth >= 992) {
-      navbarToggler.classList.add('hide-on-big-screens');
-      navbarCollapse.classList.remove('collapsed'); // Expand the menu on big screens
-    } else {
-      navbarToggler.classList.remove('hide-on-big-screens');
-      navbarCollapse.classList.add('collapsed'); // Collapse the menu on small screens
-    }
-  }
-
-  window.addEventListener('load', toggleNavbarToggler);
-  window.addEventListener('resize', toggleNavbarToggler);
-
-  document.addEventListener('DOMContentLoaded', function () {
-    var toggler = document.querySelector('.custom-navbar-toggler');
-    var navbarCollapse = document.querySelector('.custom-navbar-collapse');
-
-    toggler.addEventListener('click', function () {
-      navbarCollapse.classList.toggle('collapsed');
-    });
-
-    toggleNavbarToggler(); // Call the function when the DOM content is loaded
-  });
-</script>
-
-
-
-
-
-</body>
-
+    </script>
+  </body>
 </html>
+{% endblock content %}

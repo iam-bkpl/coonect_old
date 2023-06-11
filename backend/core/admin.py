@@ -4,7 +4,6 @@ from core.models import (
   Timing,
   HomePageImage,
   AboutUs,
-  SocialLink,
   Team,
   Service,
   Partners,
@@ -19,7 +18,6 @@ admin.site.register(AdminBank)
 admin.site.register(Timing)
 admin.site.register(HomePageImage)
 admin.site.register(AboutUs)
-admin.site.register(SocialLink)
 admin.site.register(Team)
 admin.site.register(Service)
 admin.site.register(Partners)

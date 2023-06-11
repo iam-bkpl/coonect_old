@@ -20,19 +20,22 @@ class HomePageImage(models.Model):
   image = models.ImageField(upload_to='home')
 
 class AboutUs(models.Model):
-  imgage = models.ImageField(upload_to='abouts/images', blank=True, null=True)
+  image = models.ImageField(upload_to='abouts/images', blank=True, null=True)
   text = models.TextField(blank=True, null=True)
 
 
-class SocialLink(models.Model):
-  name = models.CharField(max_length=255, blank=True, null=True)
-  link = models.URLField(blank=True,null=True)  
+# class SocialLink(models.Model):
+#   name = models.CharField(max_length=255, blank=True, null=True)
+#   link = models.URLField(blank=True,null=True)  
 
 class Team(models.Model):
   image = models.ImageField(upload_to='team/images', blank=True, null=True)
   name = models.CharField(max_length=255)
   position = models.CharField(max_length=255, blank=True, null=True)
-  socia_link = models.ForeignKey(SocialLink, on_delete=models.CASCADE)
+  facebook_link = models.URLField(blank=True, null=True, default="https://www.facebook.com/")
+  instagram_link = models.URLField(blank=True, null=True, default="https://www.instagram.com/")
+  linkedin_link = models.URLField(blank=True, null=True, default="https://www.linkedin.com/")
+
 
 class Service(models.Model):
   name = models.CharField(max_length=255, blank=True, null=True)
@@ -51,7 +54,7 @@ class Event(models.Model):
   image = models.ImageField(upload_to='event/images')
   location = models.CharField(max_length=255)
   hover_text = models.CharField(max_length=255)
-  date = models.DateTimeField(auto_now=True)
+  date = models.DateTimeField()
   
 class MainService(models.Model):
   name = models.CharField(max_length=255)
@@ -92,12 +95,12 @@ class Membership(models.Model):
   address = models.CharField(max_length=255, blank=True, null=True)
   phone = models.CharField(max_length=255, blank=True, null=True)
   profile = models.ImageField(upload_to='PP')
-  passport_front = models.ImageField(upload_to='passport')
-  passport_back = models.ImageField(upload_to='passport')
+  passport_front = models.FileField(upload_to='passport')
+  passport_back = models.FileField(upload_to='passport')
   membership_type = models.CharField(max_length=255, choices=MEMBERSHIP_TYPE_CHOICES, default=MEMBERSHIP_TYPE_INDIVIDUAL)
   membership_duration = models.CharField(max_length=255, choices=MEMBERSHIP_DURATION_CHOICES, default=MEMBERSHIP_DURATION_MONTHLY)
   agree_terms_condition = models.BooleanField(default=False)
-  
+  membership_receipt  = models.FileField(null=True, blank=True)
   
   
 class SubscriptionPlan(models.Model):
