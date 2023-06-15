@@ -12,6 +12,7 @@ from core.models import (
   Contact,
   Membership,
   SubscriptionPlan,
+  UserContact,
 )
 
 admin.site.register(AdminBank)
@@ -26,6 +27,9 @@ admin.site.register(MainService)
 admin.site.register(Contact)
 admin.site.register(Membership)
 admin.site.register(SubscriptionPlan)
+admin.site.register(UserContact)
+
+
 
 
 

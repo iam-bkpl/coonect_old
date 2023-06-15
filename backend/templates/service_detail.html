@@ -1,0 +1,287 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Detail</title>
+    {% comment %}
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/footer.css" />
+    <!-- /* add font awesome link*/ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Added 1 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Libraries -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="lib/slick/slick.css" rel="stylesheet" />
+    <link href="lib/slick/slick-theme.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="/static/css/aboutus.css" />
+
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/nav2.css" />
+
+    <!-- Added 1 till -->
+
+    <link rel="stylesheet" href="/static/css/services.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="/static/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    {% endcomment %} {% include 'base/headCss.html' %}
+    <link rel="stylesheet" href="{% static 'css/link.css' %}" />
+  </head>
+
+  <body>
+    <!-- header  -->
+
+    <div class="wrapper">
+      <!-- Top Bar End -->
+      {% include 'base/topNav.html' %}
+      <!-- Nav Bar Start -->
+      {% include 'base/navbar.html' %}
+
+      <!-- header ends -->
+      <section class="main-card-section">
+        <div class="main-card">
+          <h1>Service Details</h1>
+          <div class="image-container">
+            <img src=" {{service.image.url}} " alt="Service Image" />
+            <div class="image-overlay">
+              <p>{{service.hover_text}}</p>
+            </div>
+          </div>
+          <h2>🚀 {{service.name}}</h2>
+          <div class="description-details">
+            <div class="left-column">
+              <div class="paragraph-card">
+                <h3>📌 Description</h3>
+                <p>{{service.description}}</p>
+                <h3>📌 Details</h3>
+                <p>
+                  ⏱️ Time:{{service.date}} <br />
+                  🗺️ {{service.location}} <br />
+                  <br />
+                </p>
+              </div>
+            </div>
+            <div class="right-column">
+              <div class="card card1">
+                <div class="card-header header1">
+                  <h4>Card 1 Header</h4>
+                </div>
+                <div class="card-content">
+                  <p>Card 1 content goes here.</p>
+                </div>
+              </div>
+              <div class="card card2">
+                <div class="card-header header2">
+                  <h4>Card 2 Header</h4>
+                </div>
+                <div class="card-content">
+                  <p>Card 2 content goes here.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {% include 'base/partners.html' %}
+
+      <!-- footer section starts  -->
+
+      <!-- footer section starts  -->
+      {% include 'base/footer.html' %}
+    </div>
+
+    <!-- footer section ends -->
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".customer-logos").slick({
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 1500,
+          arrows: false,
+          dots: false,
+          pauseOnHover: false,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 4,
+              },
+            },
+            {
+              breakpoint: 520,
+              settings: {
+                slidesToShow: 3,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+    <script>
+      function slideCarousel() {
+        const carouselContainer = document.querySelector(
+          ".carousel-container-4"
+        );
+        const carousel = carouselContainer.querySelector(".carousel");
+        const slides = carousel.querySelectorAll(".slide");
+        const slideWidth = slides[0].offsetWidth;
+        let currentPosition = 0;
+
+        carousel.style.transform = `translateX(${currentPosition}px)`;
+
+        function nextSlide() {
+          if (currentPosition > -(slideWidth * (slides.length - 4))) {
+            currentPosition -= slideWidth;
+            carousel.style.transform = `translateX(${currentPosition}px)`;
+          }
+        }
+
+        function prevSlide() {
+          if (currentPosition !== 0) {
+            currentPosition += slideWidth;
+            carousel.style.transform = `translateX(${currentPosition}px)`;
+          }
+        }
+
+        carouselContainer.addEventListener("mouseenter", () => {
+          carouselContainer.addEventListener("mousemove", handleMouseMove);
+        });
+
+        carouselContainer.addEventListener("mouseleave", () => {
+          carouselContainer.removeEventListener("mousemove", handleMouseMove);
+        });
+
+        function handleMouseMove(event) {
+          const containerWidth = carouselContainer.offsetWidth;
+          const containerCenter = containerWidth / 2;
+          const mousePosition =
+            event.clientX - carouselContainer.getBoundingClientRect().left;
+
+          if (mousePosition < containerCenter && currentPosition !== 0) {
+            prevSlide();
+          } else if (
+            mousePosition > containerCenter &&
+            currentPosition > -(slideWidth * (slides.length - 4))
+          ) {
+            nextSlide();
+          }
+        }
+      }
+
+      slideCarousel();
+    </script>
+
+    <script>
+      // Get a reference to the button element
+      var button = document.getElementById("button");
+
+      // Add an onclick event listener to the button
+      button.addEventListener("click", function () {
+        // Redirect to mem.html
+        window.location.href = "mem.html";
+      });
+    </script>
+    <script>
+      function toggleNavbarToggler() {
+        const navbarToggler = document.getElementById("customNavbarToggler");
+        const navbarCollapse = document.querySelector(
+          ".custom-navbar-collapse"
+        );
+
+        if (window.innerWidth >= 992) {
+          navbarToggler.classList.add("hide-on-big-screens");
+          navbarCollapse.classList.remove("collapsed"); // Expand the menu on big screens
+        } else {
+          navbarToggler.classList.remove("hide-on-big-screens");
+          navbarCollapse.classList.add("collapsed"); // Collapse the menu on small screens
+        }
+      }
+
+      window.addEventListener("load", toggleNavbarToggler);
+      window.addEventListener("resize", toggleNavbarToggler);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var toggler = document.querySelector(".custom-navbar-toggler");
+        var navbarCollapse = document.querySelector(".custom-navbar-collapse");
+
+        toggler.addEventListener("click", function () {
+          navbarCollapse.classList.toggle("collapsed");
+        });
+
+        toggleNavbarToggler(); // Call the function when the DOM content is loaded
+      });
+    </script>
+  </body>
+</html>

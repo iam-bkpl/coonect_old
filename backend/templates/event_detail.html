@@ -5,14 +5,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    {% include 'base/headCss.html' %} {% comment %}
+    <title>Event Detail</title>
+    {% comment %}
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
-    <!-- <link rel="stylesheet" href="/static/css/footer.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/footer.css" />
     <!-- /* add font awesome link*/ -->
     <link
       rel="stylesheet"
@@ -48,11 +51,9 @@
     />
 
     <!-- CSS Libraries -->
+    <link rel="stylesheet" href="/static/css/aboutus.css" />
 
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="stylesheet" href="/static/css/contact.css" />
-
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="/static/css/nav2.css" />
 
     <!-- Added 1 till -->
@@ -64,174 +65,70 @@
     />
     <script src="/static/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    {% endcomment %}
-    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+
+    {% endcomment %} {% include 'base/headCss.html' %}
+    <link rel="stylesheet" href="{% static 'css/link.css' %}" />
   </head>
 
   <body>
     <!-- header  -->
 
     <div class="wrapper">
-      {% include 'base/topNav.html' %}
       <!-- Top Bar End -->
-
+      {% include 'base/topNav.html' %}
       <!-- Nav Bar Start -->
       {% include 'base/navbar.html' %}
+
       <!-- header ends -->
-      <div class="container-contact">
-        <h2 class="contact-h2">We would love to hear from you!</h2>
-        <div class="contact-info">
-          <p class="info-paragraph">
-            If you have any questions or comments about our programs and
-            services, please feel free to contact us using the information
-            below.<br /><br />
-            📞 Phone: {{contact.phone}} <br />
-            📩 Email: {{contact.email}}<br />
-            📌 Address: {{contact.address}} <br /><br />
-            If you would like to volunteer or donate to our organization, please
-            visit our Get Involved page for more information.<br /><br />
-            ⏱️ Our office hours are 10am - 5pm.<br /><br />
-            We do our best to respond to all inquiries within 1-2 business
-            days.<br /><br />
-            ⚠️ If you require immediate assistance or have an emergency, please
-            dial [Insert emergency phone number].
-          </p>
-          <p class="c">
-            Thank you for your support of our community services organization.
-            We look forward to hearing from you soon.
-          </p>
-        </div>
-      </div>
-
-      <!-- **************Latest Rooom************** -->
-      <section class="container mt-5">
-        <!--Contact heading-->
-        <div class="row">
-          <!-- <div class="col-sm-12 text-center mb-4">
-            <a class="btn btn-primary" target="_blank" href=""> Donate Now <i class="fa fa-dollar"></i></a>
-          </div> -->
-          <!--Grid column-->
-          <div class="col-sm-12 mb-4 col-md-5">
-            <!--Form with header-->
-            <form>
-              {% csrf_token %}
-              <div class="card border-primary rounded-0">
-                <div class="card-header p-0">
-                  <div
-                    class="text-white text-center py-2"
-                    style="background-color: #00f"
-                  >
-                    <h3><i class="fa fa-envelope"></i> Write to us:</h3>
-                    <p class="m-0">
-                      We’ll write rarely, but only the best content.
-                    </p>
-                  </div>
-                </div>
-                <div class="card-body p-3">
-                  <div class="form-group">
-                    <label> Your name </label>
-                    <div class="input-group">
-                      <input
-                        value=""
-                        type="text"
-                        name="name"
-                        class="form-control"
-                        id="inlineFormInputGroupUsername"
-                        placeholder="Your name"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label>Your email</label>
-                    <div class="input-group mb-2 mb-sm-0">
-                      <input
-                        type="email"
-                        value=""
-                        name="email"
-                        class="form-control"
-                        id="inlineFormInputGroupUsername"
-                        placeholder="Email"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label>Subject</label>
-                    <div class="input-group mb-2 mb-sm-0">
-                      <input
-                        type="text"
-                        name="subject"
-                        class="form-control"
-                        id="inlineFormInputGroupUsername"
-                        placeholder="Subject"
-                      />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label>Message</label>
-                    <div class="input-group mb-2 mb-sm-0">
-                      <input type="text" class="form-control" name="message" />
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <input
-                      type="submit"
-                      name="submit"
-                      value="Submit"
-                      class="custom-btn"
-                      style="background-color: #2868e6"
-                    />
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-sm-12 col-md-7">
-            <!--Google map-->
-            <div class="mb-4">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31713618736!2d85.28493299593472!3d27.70895425220037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1685196588425!5m2!1sen!2snp"
-                width="100%"
-                height="450"
-                frameborder="0"
-                style="border: 0"
-                allowfullscreen=""
-                aria-hidden="false"
-                tabindex="0"
-              ></iframe>
+      <section class="main-card-section">
+        <div class="main-card">
+          <h1>Event Details</h1>
+          <div class="image-container">
+            <img src=" {{event.image.url}} " alt="Event Image" />
+            <div class="image-overlay">
+              <p>{{event.hover_text}}</p>
             </div>
-            <!--Buttons-->
-            <div class="row text-center">
-              <div class="col-md-4">
-                <a
-                  class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"
-                  ><i class="fa fa-map-marker"></i
-                ></a>
-                <p>{{contact.address}}</p>
+          </div>
+          <h2>🚀 {{event.name}}</h2>
+          <div class="description-details">
+            <div class="left-column">
+              <div class="paragraph-card">
+                <h3>📌 Description</h3>
+                <p>{{event.description}}</p>
+                <h3>📌 Details</h3>
+                <p>
+                  ⏱️ Time:{{event.date}} <br />
+                  🗺️ {{event.location}} <br />
+                  <br />
+                </p>
               </div>
-              <div class="col-md-4">
-                <a
-                  class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"
-                  ><i class="fa fa-phone"></i
-                ></a>
-                <p>{{contact.phone}}</p>
+            </div>
+            <div class="right-column">
+              <div class="card card1">
+                <div class="card-header header1">
+                  <h4>Card 1 Header</h4>
+                </div>
+                <div class="card-content">
+                  <p>Card 1 content goes here.</p>
+                </div>
               </div>
-              <div class="col-md-4">
-                <a
-                  class="bg-primary px-3 py-2 rounded text-white mb-2 d-inline-block"
-                  ><i class="fa fa-envelope"></i
-                ></a>
-                <p>{{contact.email}}</p>
+              <div class="card card2">
+                <div class="card-header header2">
+                  <h4>Card 2 Header</h4>
+                </div>
+                <div class="card-content">
+                  <p>Card 2 content goes here.</p>
+                </div>
               </div>
             </div>
           </div>
-          <!--Grid column-->
         </div>
       </section>
 
       {% include 'base/partners.html' %}
+
+      <!-- footer section starts  -->
+
       <!-- footer section starts  -->
       {% include 'base/footer.html' %}
     </div>
@@ -244,23 +141,7 @@
     <script src="js/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper(".swiper", {
-        autopaly: {
-          delay: 300,
-          disableOnInteraction: false,
-        },
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
+
     <script src="js/script.js"></script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -372,7 +253,6 @@
         window.location.href = "mem.html";
       });
     </script>
-
     <script>
       function toggleNavbarToggler() {
         const navbarToggler = document.getElementById("customNavbarToggler");

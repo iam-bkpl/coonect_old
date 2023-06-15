@@ -1,14 +1,31 @@
 from django.contrib.auth.models import User
 from django.views import View
 from django.shortcuts import render,redirect
-from .models import (AboutUs, AdminBank, Contact, Event, Membership, Partners, Service,
-  SubscriptionPlan, Team)
+from .models import (AboutUs, AdminBank, Contact, Event, HomePageImage, MainService, Membership,
+  Partners, Service, SubscriptionPlan, Team, UserContact)
 from django.utils import timezone
 import random
 
 class HomeView(View):
   def get(self,request):
-    return render(request, 'index.html')
+    aboutus = AboutUs.objects.first()
+    teams = Team.objects.all()
+    services = Service.objects.all()
+    partners = Partners.objects.all()
+    events = Event.objects.all()
+    home_page_images  = HomePageImage.objects.all()
+    
+    
+    context = {
+      'about':aboutus,
+      'teams':teams,
+      'services':services,
+      'partners':partners,
+      'events':events,
+      'home_page_images':home_page_images
+      
+    }
+    return render(request, 'index.html',context)
   
   
 class AboutUsView(View):
@@ -17,12 +34,16 @@ class AboutUsView(View):
     teams = Team.objects.all()
     services = Service.objects.all()
     partners = Partners.objects.all()
+    events = Event.objects.all()
+    
     
     context = {
       'about':aboutus,
       'teams':teams,
       'services':services,
       'partners':partners,
+      'events':events,
+      
     }
     return render(request,'aboutus.html',context)
   
@@ -38,20 +59,44 @@ class EventView(View):
     'partners':partners,
     }
     return render(request, 'events.html', context)
-  
+
+class EventDetailView(View):
+  def get(self,request, pk):
+    partners = Partners.objects.all()
+    event = Event.objects.get(pk=pk)
+    context = {
+    'partners':partners,
+    'event':event,
+      
+    }
+    return render(request,'event_detail.html', context)
   
 class ServiceView(View):
   def get(self, request):
-    services = Service.objects.all()
+    services = MainService.objects.all()
     partners = Partners.objects.all()
+    events = Event.objects.order_by('date')[:3]
+    
     
     context = {
       'services':services,
       'partners':partners,
+      'events':events,
+      
     }
     return render (request, 'services.html', context)
   
-  
+class ServiceDetailView(View):
+  def get(self,request,pk):
+    service = MainService.objects.get(id=pk)
+    partners = Partners.objects.all()
+    
+    context = {
+      'service':service,
+      'partners':partners,
+    }
+    return render(request,'service_detail.html',context)
+
 class ContactView(View):
   def get(self, request):
     contact = Contact.objects.last()
@@ -108,7 +153,19 @@ class MembershipView(View):
     
     return redirect('home')
   
-
-
+class UserContactView(View):
+  def get(self,request):
+    pass
+  
+  def post(self,request):
+    name = request.POST.get('name')
+    email = request.POST.get('email')
+    subject = request.POST.get('subject')
+    message = request.POST.get('message')
+    
+    
+    UserContact.objects.create(name=name,email=email,subject=subject,message=message)
+    
+    return redirect(request,'home')
   
   

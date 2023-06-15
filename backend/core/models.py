@@ -22,6 +22,7 @@ class HomePageImage(models.Model):
 class AboutUs(models.Model):
   image = models.ImageField(upload_to='abouts/images', blank=True, null=True)
   text = models.TextField(blank=True, null=True)
+  
 
 
 # class SocialLink(models.Model):
@@ -51,17 +52,20 @@ class Partners(models.Model):
 class Event(models.Model):
   name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')
   description = models.TextField(null=True, blank=True)
-  image = models.ImageField(upload_to='event/images')
-  location = models.CharField(max_length=255)
-  hover_text = models.CharField(max_length=255)
+  image = models.ImageField(upload_to='event/images', blank=True,null=True)
+  location = models.CharField(max_length=255, blank=True, null=True)
+  hover_text = models.CharField(max_length=255, blank=True, null=True)
   date = models.DateTimeField()
   
 class MainService(models.Model):
-  name = models.CharField(max_length=255)
-  price = models.PositiveIntegerField()
-  location = models.CharField(max_length=255)
-  description = models.TextField()
-
+  name = models.CharField(max_length=255,blank=True, null=True)
+  description = models.TextField(null=True, blank=True)
+  image = models.ImageField(upload_to='mainService/images',null=True, blank=True)
+  hover_text = models.CharField(max_length=255, blank=True, null=True)  
+  location = models.CharField(max_length=255,null=True,blank=True)
+  price = models.PositiveIntegerField(default=0)
+  date = models.DateTimeField(auto_now=True)
+  
     
 class Contact(models.Model):
   phone = models.CharField(max_length=20)
@@ -106,3 +110,11 @@ class Membership(models.Model):
 class SubscriptionPlan(models.Model):
   name = models.CharField(max_length=255)
   description = models.TextField(null=True, blank=True)
+  
+  
+class UserContact(models.Model):
+  name = models.CharField(max_length=255,blank=True, null=True)
+  email = models.EmailField(blank=True, null=True)
+  subject = models.CharField(max_length=255,null=True,blank=True)
+  message = models.TextField(max_length=True,null=True)
+  

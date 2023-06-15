@@ -185,6 +185,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -291,6 +307,14 @@
     },
     {
         "label": "SubscriptionPlan",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserContact",
         "importPath": "core.models",
         "description": "core.models",
         "isExtraImport": true,
@@ -668,6 +692,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "core.migrations.0007_mainservice_date_mainservice_hover_text_and_more",
+        "description": "core.migrations.0007_mainservice_date_mainservice_hover_text_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0006_membership_membership_receipt_and_more'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='mainservice',\n            name='date',\n            field=models.DateTimeField(auto_now=True),\n        ),",
+        "detail": "core.migrations.0007_mainservice_date_mainservice_hover_text_and_more",
+        "documentation": {}
+    },
+    {
         "label": "CoreConfig",
         "kind": 6,
         "importPath": "core.apps",
@@ -735,7 +768,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Partners(models.Model):\n  name = models.CharField(max_length=255)\n  image = models.ImageField(upload_to='partner/images')\nclass Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='event/images')\n  location = models.CharField(max_length=255)\n  hover_text = models.CharField(max_length=255)\n  date = models.DateTimeField()",
+        "peekOfCode": "class Partners(models.Model):\n  name = models.CharField(max_length=255)\n  image = models.ImageField(upload_to='partner/images')\nclass Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='event/images', blank=True,null=True)\n  location = models.CharField(max_length=255, blank=True, null=True)\n  hover_text = models.CharField(max_length=255, blank=True, null=True)\n  date = models.DateTimeField()",
         "detail": "core.models",
         "documentation": {}
     },
@@ -744,7 +777,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='event/images')\n  location = models.CharField(max_length=255)\n  hover_text = models.CharField(max_length=255)\n  date = models.DateTimeField()\nclass MainService(models.Model):\n  name = models.CharField(max_length=255)\n  price = models.PositiveIntegerField()",
+        "peekOfCode": "class Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='event/images', blank=True,null=True)\n  location = models.CharField(max_length=255, blank=True, null=True)\n  hover_text = models.CharField(max_length=255, blank=True, null=True)\n  date = models.DateTimeField()\nclass MainService(models.Model):\n  name = models.CharField(max_length=255,blank=True, null=True)\n  description = models.TextField(null=True, blank=True)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -753,7 +786,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class MainService(models.Model):\n  name = models.CharField(max_length=255)\n  price = models.PositiveIntegerField()\n  location = models.CharField(max_length=255)\n  description = models.TextField()\nclass Contact(models.Model):\n  phone = models.CharField(max_length=20)\n  email = models.EmailField()\n  address = models.CharField(max_length=255)\nclass Membership(models.Model):",
+        "peekOfCode": "class MainService(models.Model):\n  name = models.CharField(max_length=255,blank=True, null=True)\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='mainService/images',null=True, blank=True)\n  hover_text = models.CharField(max_length=255, blank=True, null=True)  \n  location = models.CharField(max_length=255,null=True,blank=True)\n  price = models.PositiveIntegerField(default=0)\n  date = models.DateTimeField(auto_now=True)\nclass Contact(models.Model):\n  phone = models.CharField(max_length=20)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -780,7 +813,16 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class SubscriptionPlan(models.Model):\n  name = models.CharField(max_length=255)\n  description = models.TextField(null=True, blank=True)",
+        "peekOfCode": "class SubscriptionPlan(models.Model):\n  name = models.CharField(max_length=255)\n  description = models.TextField(null=True, blank=True)\nclass UserContact(models.Model):\n  name = models.CharField(max_length=255,blank=True, null=True)\n  email = models.EmailField(blank=True, null=True)\n  subject = models.CharField(max_length=255,null=True,blank=True)\n  message = models.TextField(max_length=True,null=True)",
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserContact",
+        "kind": 6,
+        "importPath": "core.models",
+        "description": "core.models",
+        "peekOfCode": "class UserContact(models.Model):\n  name = models.CharField(max_length=255,blank=True, null=True)\n  email = models.EmailField(blank=True, null=True)\n  subject = models.CharField(max_length=255,null=True,blank=True)\n  message = models.TextField(max_length=True,null=True)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -789,7 +831,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n  path('',views.HomeView.as_view(), name='home'),\n  path('aboutus/', views.AboutUsView.as_view(),name='aboutus'),\n  path('event/', views.EventView.as_view(),name='event'),\n  path('service/', views.ServiceView.as_view(),name='service'),\n  path('contact/', views.ContactView.as_view(),name='contact'),\n  path('membership/', views.MembershipView.as_view(),name='membership'),\n]",
+        "peekOfCode": "urlpatterns = [\n  path('',views.HomeView.as_view(), name='home'),\n  path('aboutus/', views.AboutUsView.as_view(),name='aboutus'),\n  path('event/', views.EventView.as_view(),name='event'),\n  path('event/<int:pk>/', views.EventDetailView.as_view(),name='event'),\n  path('service/', views.ServiceView.as_view(),name='service'),\n  path('service/<int:pk>/', views.ServiceDetailView.as_view(),name='service'),\n  path('contact/', views.ContactView.as_view(),name='contact'),\n  path('user-contact/', views.UserContactView.as_view(),name='contact'),\n  path('membership/', views.MembershipView.as_view(),name='membership'),",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -798,7 +840,7 @@
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class HomeView(View):\n  def get(self,request):\n    return render(request, 'index.html')\nclass AboutUsView(View):\n  def get(self,request):\n    aboutus = AboutUs.objects.first()\n    teams = Team.objects.all()\n    services = Service.objects.all()\n    partners = Partners.objects.all()\n    context = {",
+        "peekOfCode": "class HomeView(View):\n  def get(self,request):\n    aboutus = AboutUs.objects.first()\n    teams = Team.objects.all()\n    services = Service.objects.all()\n    partners = Partners.objects.all()\n    events = Event.objects.all()\n    home_page_images  = HomePageImage.objects.all()\n    context = {\n      'about':aboutus,",
         "detail": "core.views",
         "documentation": {}
     },
@@ -807,7 +849,7 @@
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class AboutUsView(View):\n  def get(self,request):\n    aboutus = AboutUs.objects.first()\n    teams = Team.objects.all()\n    services = Service.objects.all()\n    partners = Partners.objects.all()\n    context = {\n      'about':aboutus,\n      'teams':teams,\n      'services':services,",
+        "peekOfCode": "class AboutUsView(View):\n  def get(self,request):\n    aboutus = AboutUs.objects.first()\n    teams = Team.objects.all()\n    services = Service.objects.all()\n    partners = Partners.objects.all()\n    events = Event.objects.all()\n    context = {\n      'about':aboutus,\n      'teams':teams,",
         "detail": "core.views",
         "documentation": {}
     },
@@ -821,11 +863,29 @@
         "documentation": {}
     },
     {
+        "label": "EventDetailView",
+        "kind": 6,
+        "importPath": "core.views",
+        "description": "core.views",
+        "peekOfCode": "class EventDetailView(View):\n  def get(self,request, pk):\n    partners = Partners.objects.all()\n    event = Event.objects.get(pk=pk)\n    context = {\n    'partners':partners,\n    'event':event,\n    }\n    return render(request,'event_detail.html', context)\nclass ServiceView(View):",
+        "detail": "core.views",
+        "documentation": {}
+    },
+    {
         "label": "ServiceView",
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class ServiceView(View):\n  def get(self, request):\n    services = Service.objects.all()\n    partners = Partners.objects.all()\n    context = {\n      'services':services,\n      'partners':partners,\n    }\n    return render (request, 'services.html', context)\nclass ContactView(View):",
+        "peekOfCode": "class ServiceView(View):\n  def get(self, request):\n    services = MainService.objects.all()\n    partners = Partners.objects.all()\n    events = Event.objects.order_by('date')[:3]\n    context = {\n      'services':services,\n      'partners':partners,\n      'events':events,\n    }",
+        "detail": "core.views",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceDetailView",
+        "kind": 6,
+        "importPath": "core.views",
+        "description": "core.views",
+        "peekOfCode": "class ServiceDetailView(View):\n  def get(self,request,pk):\n    service = MainService.objects.get(id=pk)\n    partners = Partners.objects.all()\n    context = {\n      'service':service,\n      'partners':partners,\n    }\n    return render(request,'service_detail.html',context)\nclass ContactView(View):",
         "detail": "core.views",
         "documentation": {}
     },
@@ -844,6 +904,15 @@
         "importPath": "core.views",
         "description": "core.views",
         "peekOfCode": "class MembershipView(View):\n  def get(self,request):\n    admin_bank = AdminBank.objects.last()\n    sub_plans = SubscriptionPlan.objects.all()\n    context = {\n      'admin_bank':admin_bank,\n      'sub_plans':sub_plans,\n    }\n    return render(request,'mem.html',context)\n  def post(self, request):",
+        "detail": "core.views",
+        "documentation": {}
+    },
+    {
+        "label": "UserContactView",
+        "kind": 6,
+        "importPath": "core.views",
+        "description": "core.views",
+        "peekOfCode": "class UserContactView(View):\n  def get(self,request):\n    pass\n  def post(self,request):\n    name = request.POST.get('name')\n    email = request.POST.get('email')\n    subject = request.POST.get('subject')\n    message = request.POST.get('message')\n    UserContact.objects.create(name=name,email=email,subject=subject,message=message)\n    return redirect(request,'home')",
         "detail": "core.views",
         "documentation": {}
     },
