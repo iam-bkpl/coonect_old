@@ -233,6 +233,38 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -347,6 +379,30 @@
     },
     {
         "label": "UserContact",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Timing",
         "importPath": "core.models",
         "description": "core.models",
         "isExtraImport": true,
@@ -751,6 +807,33 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "core.migrations.0010_eventfeatures_contact_map",
+        "description": "core.migrations.0010_eventfeatures_contact_map",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0009_team_description'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='EventFeatures',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(blank=True, max_length=255, null=True)),",
+        "detail": "core.migrations.0010_eventfeatures_contact_map",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "core.migrations.0011_alter_timing_end_time_alter_timing_start_time",
+        "description": "core.migrations.0011_alter_timing_end_time_alter_timing_start_time",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0010_eventfeatures_contact_map'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='timing',\n            name='end_time',\n            field=models.TimeField(),\n        ),",
+        "detail": "core.migrations.0011_alter_timing_end_time_alter_timing_start_time",
+        "documentation": {}
+    },
+    {
+        "label": "MembershipAdmin",
+        "kind": 6,
+        "importPath": "core.admin",
+        "description": "core.admin",
+        "peekOfCode": "class MembershipAdmin(admin.ModelAdmin):\n  list_display =['user','phone','membership_duration']\nadmin.site.register(AdminBank)\nadmin.site.register(Timing)\nadmin.site.register(HomePageImage)\nadmin.site.register(AboutUs)\nadmin.site.register(Team)\nadmin.site.register(Service)\nadmin.site.register(Partners)\nadmin.site.register(Event)",
+        "detail": "core.admin",
+        "documentation": {}
+    },
+    {
         "label": "CoreConfig",
         "kind": 6,
         "importPath": "core.apps",
@@ -760,11 +843,20 @@
         "documentation": {}
     },
     {
+        "label": "navbar_footer_context",
+        "kind": 2,
+        "importPath": "core.context_processors",
+        "description": "core.context_processors",
+        "peekOfCode": "def navbar_footer_context(request):\n    # Retrieve the necessary objects\n    contact_data = Contact.objects.last()\n    service_data = Service.objects.all()[:4]\n    timing_data = Timing.objects.last()\n    # Return a dictionary with the objects\n    return {\n        'contact_data': contact_data,\n        'footer_data': service_data,\n        'timing_data':timing_data,",
+        "detail": "core.context_processors",
+        "documentation": {}
+    },
+    {
         "label": "AdminBank",
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class AdminBank(models.Model):\n  account_name = models.CharField(max_length=255)\n  bank_name = models.CharField(max_length=255)\n  branch = models.CharField(max_length=255)\n  account_number = models.CharField(max_length=255)\n  qr_code = models.ImageField(upload_to='admin_bank')\nclass Timing(models.Model):\n  first_day = models.CharField(max_length=255)\n  last_day = models.CharField(max_length=255)\n  start_time = models.TimeField(auto_now=True)",
+        "peekOfCode": "class AdminBank(models.Model):\n  account_name = models.CharField(max_length=255)\n  bank_name = models.CharField(max_length=255)\n  branch = models.CharField(max_length=255)\n  account_number = models.CharField(max_length=255)\n  qr_code = models.ImageField(upload_to='admin_bank')\nclass Timing(models.Model):\n  first_day = models.CharField(max_length=255)\n  last_day = models.CharField(max_length=255)\n  start_time = models.TimeField()",
         "detail": "core.models",
         "documentation": {}
     },
@@ -773,7 +865,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Timing(models.Model):\n  first_day = models.CharField(max_length=255)\n  last_day = models.CharField(max_length=255)\n  start_time = models.TimeField(auto_now=True)\n  end_time = models.TimeField(auto_now=True)\nclass HomePageImage(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  image = models.ImageField(upload_to='home')\nclass AboutUs(models.Model):\n  image = models.ImageField(upload_to='abouts/images', blank=True, null=True)",
+        "peekOfCode": "class Timing(models.Model):\n  first_day = models.CharField(max_length=255)\n  last_day = models.CharField(max_length=255)\n  start_time = models.TimeField()\n  end_time = models.TimeField()\nclass HomePageImage(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  image = models.ImageField(upload_to='home')\nclass AboutUs(models.Model):\n  image = models.ImageField(upload_to='abouts/images', blank=True, null=True)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -809,7 +901,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Service(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  image = models.ImageField(upload_to='service/images')\n  text = models.TextField()\nclass Partners(models.Model):\n  name = models.CharField(max_length=255)\n  image = models.ImageField(upload_to='partner/images')\nclass Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)",
+        "peekOfCode": "class Service(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  image = models.ImageField(upload_to='service/images')\n  text = models.TextField()\nclass Partners(models.Model):\n  name = models.CharField(max_length=255)\n  image = models.ImageField(upload_to='partner/images')\nclass EventFeatures(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  description = models.CharField(max_length=255, blank=True,null=True)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -818,7 +910,16 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Partners(models.Model):\n  name = models.CharField(max_length=255)\n  image = models.ImageField(upload_to='partner/images')\nclass Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='event/images', blank=True,null=True)\n  location = models.CharField(max_length=255, blank=True, null=True)\n  hover_text = models.CharField(max_length=255, blank=True, null=True)\n  date = models.DateTimeField()",
+        "peekOfCode": "class Partners(models.Model):\n  name = models.CharField(max_length=255)\n  image = models.ImageField(upload_to='partner/images')\nclass EventFeatures(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  description = models.CharField(max_length=255, blank=True,null=True)\nclass Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='event/images', blank=True,null=True)",
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "EventFeatures",
+        "kind": 6,
+        "importPath": "core.models",
+        "description": "core.models",
+        "peekOfCode": "class EventFeatures(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  description = models.CharField(max_length=255, blank=True,null=True)\nclass Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='event/images', blank=True,null=True)\n  location = models.CharField(max_length=255, blank=True, null=True)\n  hover_text = models.CharField(max_length=255, blank=True, null=True)\n  date = models.DateTimeField()",
         "detail": "core.models",
         "documentation": {}
     },
@@ -845,7 +946,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Contact(models.Model):\n  phone = models.CharField(max_length=20)\n  email = models.EmailField()\n  address = models.CharField(max_length=255)\nclass Membership(models.Model):\n  MEMBERSHIP_TYPE_INDIVIDUAL = 'individual'\n  MEMBERSHIP_TYPE_FAMILY = 'family'\n  MEMBERSHIP_TYPE_STUDENT = 'student'\n  MEMBERSHIP_TYPE_CHOICES = [\n    (MEMBERSHIP_TYPE_INDIVIDUAL, 'individual'),",
+        "peekOfCode": "class Contact(models.Model):\n  phone = models.CharField(max_length=20)\n  email = models.EmailField()\n  address = models.CharField(max_length=255)\n  map = models.TextField(blank=True,null=True)\n  facebook = models.URLField(blank=True,null=True)\n  twitter = models.URLField(blank=True,null=True)\nclass Membership(models.Model):\n  MEMBERSHIP_TYPE_INDIVIDUAL = 'individual'\n  MEMBERSHIP_TYPE_FAMILY = 'family'",
         "detail": "core.models",
         "documentation": {}
     },
@@ -890,7 +991,7 @@
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class HomeView(View):\n  def get(self,request):\n    aboutus = AboutUs.objects.first()\n    teams = Team.objects.all()\n    services = Service.objects.all()\n    partners = Partners.objects.all()\n    events = Event.objects.all()\n    home_page_images  = HomePageImage.objects.all()\n    context = {\n      'about':aboutus,",
+        "peekOfCode": "class HomeView(View):\n  def get(self,request):\n    aboutus = AboutUs.objects.first()\n    teams = Team.objects.all()\n    services = Service.objects.all()\n    partners = Partners.objects.all()\n    events = Event.objects.all()\n    home_page_images  = HomePageImage.objects.all()\n    # timing = Timing.objects.last()\n    # contact = Contact.objects.last()",
         "detail": "core.views",
         "documentation": {}
     },
@@ -926,7 +1027,7 @@
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class ServiceView(View):\n  def get(self, request):\n    services = MainService.objects.all()\n    partners = Partners.objects.all()\n    events = Event.objects.order_by('date')[:3]\n    context = {\n      'services':services,\n      'partners':partners,\n      'events':events,\n    }",
+        "peekOfCode": "class ServiceView(View):\n  def get(self, request):\n    services = MainService.objects.all()\n    partners = Partners.objects.all()\n    services_seconday = Service.objects.all()[:3]\n    context = {\n      'services':services,\n      'partners':partners,\n      'services_secondary':services_seconday,\n    }",
         "detail": "core.views",
         "documentation": {}
     },

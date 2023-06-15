@@ -12,8 +12,8 @@ class AdminBank(models.Model):
 class Timing(models.Model):
   first_day = models.CharField(max_length=255)
   last_day = models.CharField(max_length=255)
-  start_time = models.TimeField(auto_now=True)
-  end_time = models.TimeField(auto_now=True)
+  start_time = models.TimeField()
+  end_time = models.TimeField()
 
 class HomePageImage(models.Model):
   name = models.CharField(max_length=255, blank=True, null=True)
@@ -49,6 +49,9 @@ class Partners(models.Model):
   name = models.CharField(max_length=255)
   image = models.ImageField(upload_to='partner/images')
   
+class EventFeatures(models.Model):
+  name = models.CharField(max_length=255, blank=True, null=True)
+  description = models.CharField(max_length=255, blank=True,null=True)
 
 class Event(models.Model):
   name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')
@@ -72,8 +75,9 @@ class Contact(models.Model):
   phone = models.CharField(max_length=20)
   email = models.EmailField()
   address = models.CharField(max_length=255)
-
-
+  map = models.TextField(blank=True,null=True)
+  facebook = models.URLField(blank=True,null=True)
+  twitter = models.URLField(blank=True,null=True)
 
 class Membership(models.Model):
   MEMBERSHIP_TYPE_INDIVIDUAL = 'individual'

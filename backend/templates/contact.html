@@ -94,7 +94,7 @@
             We do our best to respond to all inquiries within 1-2 business
             days.<br /><br />
             ⚠️ If you require immediate assistance or have an emergency, please
-            dial [Insert emergency phone number].
+            dial [{{contact.phone}}].
           </p>
           <p class="c">
             Thank you for your support of our community services organization.
@@ -110,7 +110,7 @@
           <!-- <div class="col-sm-12 text-center mb-4">
             <a class="btn btn-primary" target="_blank" href=""> Donate Now <i class="fa fa-dollar"></i></a>
           </div> -->
-          <!--Grid column-->  
+          <!--Grid column-->
           <div class="col-sm-12 mb-4 col-md-5">
             <!--Form with header-->
             <form method="POST" action="{% url 'contact' %}">
@@ -192,7 +192,7 @@
             <!--Google map-->
             <div class="mb-4">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56516.31713618736!2d85.28493299593472!3d27.70895425220037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1bf18db1ea!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1685196588425!5m2!1sen!2snp"
+                src="{{contact.map}}"
                 width="100%"
                 height="450"
                 frameborder="0"

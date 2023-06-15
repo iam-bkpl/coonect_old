@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.views import View
 from django.shortcuts import render,redirect
 from .models import (AboutUs, AdminBank, Contact, Event, HomePageImage, MainService, Membership,
-  Partners, Service, SubscriptionPlan, Team, UserContact)
+  Partners, Service, SubscriptionPlan, Team, Timing, UserContact)
 from django.utils import timezone
 import random
 
@@ -14,7 +14,8 @@ class HomeView(View):
     partners = Partners.objects.all()
     events = Event.objects.all()
     home_page_images  = HomePageImage.objects.all()
-    
+    # timing = Timing.objects.last()
+    # contact = Contact.objects.last()
     
     context = {
       'about':aboutus,
@@ -22,8 +23,9 @@ class HomeView(View):
       'services':services,
       'partners':partners,
       'events':events,
-      'home_page_images':home_page_images
-      
+      'home_page_images':home_page_images,
+      # 'timing':timing,
+      # 'contact':contact,
     }
     return render(request, 'index.html',context)
   
@@ -75,13 +77,13 @@ class ServiceView(View):
   def get(self, request):
     services = MainService.objects.all()
     partners = Partners.objects.all()
-    events = Event.objects.order_by('date')[:3]
+    services_seconday = Service.objects.all()[:3]
     
     
     context = {
       'services':services,
       'partners':partners,
-      'events':events,
+      'services_secondary':services_seconday,
       
     }
     return render (request, 'services.html', context)

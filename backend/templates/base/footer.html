@@ -4,9 +4,9 @@
       <div class="col-md-6 col-lg-3">
         <div class="footer-contact">
           <h2>Office Contact</h2>
-          <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
-          <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-          <p><i class="fa fa-envelope"></i>info@example.com</p>
+          <p><i class="fa fa-map-marker-alt"></i>{{contact_data.address}}</p>
+          <p><i class="fa fa-phone-alt"></i>{{contact_data.phone}}</p>
+          <p><i class="fa fa-envelope"></i>{{contact_data.email}}</p>
           <div class="footer-social">
             <a href=""><i class="fab fa-twitter"></i></a>
             <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -19,10 +19,9 @@
       <div class="col-md-6 col-lg-3">
         <div class="footer-link">
           <h2>Services Areas</h2>
-          <a href="">Tours and Travels </a>
-          <a href="">Passport renewal </a>
-          <a href="">Work Permit renewal </a>
-          <a href="">Attestation Guidance </a>
+          {% for service in service_data %}
+          <a href=" {% url 'service' service.id %} ">{{service.name}} </a>
+          {% endfor %}
         </div>
       </div>
       <div class="col-md-6 col-lg-3">

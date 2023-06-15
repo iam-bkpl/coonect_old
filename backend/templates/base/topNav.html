@@ -22,7 +22,10 @@
               </div>
               <div class="top-bar-text">
                 <h3>Opening Hour</h3>
-                <p>Mon - Fri, 8:00 - 9:00</p>
+                <p>
+                  {{timing_data.first_day}} - {{timing_data.last_day}},
+                  {{timing_data.start_time}} - {{timing_data.end_time}}
+                </p>
               </div>
             </div>
           </div>
@@ -33,7 +36,7 @@
               </div>
               <div class="top-bar-text">
                 <h3>Call Us</h3>
-                <p>+012 345 6789</p>
+                <p>{{contact_data.phone}}</p>
               </div>
             </div>
           </div>
@@ -44,7 +47,7 @@
               </div>
               <div class="top-bar-text">
                 <h3>Email Us</h3>
-                <p>info@example.com</p>
+                <p>{{contact_data.email}}</p>
               </div>
             </div>
           </div>
