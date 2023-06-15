@@ -8,22 +8,35 @@ class AdminBank(models.Model):
   account_number = models.CharField(max_length=255)
   qr_code = models.ImageField(upload_to='admin_bank')
   
+  def __str__(self):
+      return self.account_name
+  
+  
   
 class Timing(models.Model):
   first_day = models.CharField(max_length=255)
   last_day = models.CharField(max_length=255)
   start_time = models.TimeField()
   end_time = models.TimeField()
+  
+  def __str__(self):
+    return f" {self.first_day} - {self.last_day} "
+  
 
 class HomePageImage(models.Model):
   name = models.CharField(max_length=255, blank=True, null=True)
   image = models.ImageField(upload_to='home')
-
+  
+  def __str__(self):
+      return self.name
+  
 class AboutUs(models.Model):
   image = models.ImageField(upload_to='abouts/images', blank=True, null=True)
   text = models.TextField(blank=True, null=True)
   
-
+  def __str__(self):
+      return self.text
+  
 
 # class SocialLink(models.Model):
 #   name = models.CharField(max_length=255, blank=True, null=True)
@@ -38,20 +51,34 @@ class Team(models.Model):
   instagram_link = models.URLField(blank=True, null=True, default="https://www.instagram.com/")
   linkedin_link = models.URLField(blank=True, null=True, default="https://www.linkedin.com/")
 
+  def __str__(self):
+      return self.name
+  
 
 class Service(models.Model):
   name = models.CharField(max_length=255, blank=True, null=True)
   image = models.ImageField(upload_to='service/images')
   text = models.TextField()
 
+  def __str__(self):
+      return self.name
+  
 
 class Partners(models.Model):
   name = models.CharField(max_length=255)
   image = models.ImageField(upload_to='partner/images')
   
+  def __str__(self):
+      return self.name
+  
+  
 class EventFeatures(models.Model):
   name = models.CharField(max_length=255, blank=True, null=True)
   description = models.CharField(max_length=255, blank=True,null=True)
+
+  def __str__(self):
+      return self.name
+  
 
 class Event(models.Model):
   name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')
@@ -61,6 +88,9 @@ class Event(models.Model):
   hover_text = models.CharField(max_length=255, blank=True, null=True)
   date = models.DateTimeField()
   
+  def __str__(self):
+      return self.name
+  
 class MainService(models.Model):
   name = models.CharField(max_length=255,blank=True, null=True)
   description = models.TextField(null=True, blank=True)
@@ -69,6 +99,9 @@ class MainService(models.Model):
   location = models.CharField(max_length=255,null=True,blank=True)
   price = models.PositiveIntegerField(default=0)
   date = models.DateTimeField(auto_now=True)
+  
+  def __str__(self):
+      return self.name
   
     
 class Contact(models.Model):
@@ -82,8 +115,10 @@ class Contact(models.Model):
   instagram = models.URLField(blank=True,null=True)
   linkedin = models.URLField(blank=True,null=True)
   
+  def __str__(self):
+      return self.email
   
-
+  
 class Membership(models.Model):
   MEMBERSHIP_TYPE_INDIVIDUAL = 'individual'
   MEMBERSHIP_TYPE_FAMILY = 'family'
@@ -116,10 +151,15 @@ class Membership(models.Model):
   agree_terms_condition = models.BooleanField(default=False)
   membership_receipt  = models.FileField(null=True, blank=True)
   
+  def __str__(self):
+      return self.user.first_name
   
 class SubscriptionPlan(models.Model):
   name = models.CharField(max_length=255)
   description = models.TextField(null=True, blank=True)
+  
+  def __str__(self):
+      return self.name
   
   
 class UserContact(models.Model):
@@ -128,3 +168,9 @@ class UserContact(models.Model):
   subject = models.CharField(max_length=255,null=True,blank=True)
   message = models.TextField(max_length=True,null=True)
   
+  def __str__(self):
+      return self.name
+  
+  
+class NewsLetter(models.Model):
+  email = models.EmailField(blank=True,null=True)

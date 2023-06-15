@@ -8,11 +8,21 @@
           <p><i class="fa fa-phone-alt"></i>{{contact_data.phone}}</p>
           <p><i class="fa fa-envelope"></i>{{contact_data.email}}</p>
           <div class="footer-social">
-            <a href=""><i class="fab fa-twitter"></i></a>
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-youtube"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href="{{contact_data.twitter}} " target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="{{contact_data.facebook}} " target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="{{contact_data.youtube}} " target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="{{contact_data.instagram}} " target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="{{contact_data.linkedin}} " target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -27,8 +37,8 @@
       <div class="col-md-6 col-lg-3">
         <div class="footer-link">
           <h2>Useful Pages</h2>
-          <a href="">Nepal Embassy in Dubai </a>
-          <a href="">Status of Tourist VISA</a>
+          <a href=" {% url 'aboutus' %} ">About </a>
+          <a href=" {% url 'service' %} ">Service </a>
         </div>
       </div>
       <div class="col-md-6 col-lg-3">

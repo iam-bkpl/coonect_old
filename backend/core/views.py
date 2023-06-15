@@ -121,7 +121,7 @@ class ContactView(View):
     
     user_contact = UserContact(name=name,email=email,subject=subject,message=message)
     user_contact.save()
-    return redirect(request,'home')
+    return redirect('home')
   
   
   
