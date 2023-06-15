@@ -78,6 +78,11 @@ class Contact(models.Model):
   map = models.TextField(blank=True,null=True)
   facebook = models.URLField(blank=True,null=True)
   twitter = models.URLField(blank=True,null=True)
+  youtube = models.URLField(blank=True,null=True)
+  instagram = models.URLField(blank=True,null=True)
+  linkedin = models.URLField(blank=True,null=True)
+  
+  
 
 class Membership(models.Model):
   MEMBERSHIP_TYPE_INDIVIDUAL = 'individual'

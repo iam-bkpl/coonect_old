@@ -265,6 +265,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -825,6 +841,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "core.migrations.0012_contact_facebook_contact_instagram_contact_linkedin_and_more",
+        "description": "core.migrations.0012_contact_facebook_contact_instagram_contact_linkedin_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0011_alter_timing_end_time_alter_timing_start_time'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='contact',\n            name='facebook',\n            field=models.URLField(blank=True, null=True),\n        ),",
+        "detail": "core.migrations.0012_contact_facebook_contact_instagram_contact_linkedin_and_more",
+        "documentation": {}
+    },
+    {
         "label": "MembershipAdmin",
         "kind": 6,
         "importPath": "core.admin",
@@ -946,7 +971,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Contact(models.Model):\n  phone = models.CharField(max_length=20)\n  email = models.EmailField()\n  address = models.CharField(max_length=255)\n  map = models.TextField(blank=True,null=True)\n  facebook = models.URLField(blank=True,null=True)\n  twitter = models.URLField(blank=True,null=True)\nclass Membership(models.Model):\n  MEMBERSHIP_TYPE_INDIVIDUAL = 'individual'\n  MEMBERSHIP_TYPE_FAMILY = 'family'",
+        "peekOfCode": "class Contact(models.Model):\n  phone = models.CharField(max_length=20)\n  email = models.EmailField()\n  address = models.CharField(max_length=255)\n  map = models.TextField(blank=True,null=True)\n  facebook = models.URLField(blank=True,null=True)\n  twitter = models.URLField(blank=True,null=True)\n  youtube = models.URLField(blank=True,null=True)\n  instagram = models.URLField(blank=True,null=True)\n  linkedin = models.URLField(blank=True,null=True)",
         "detail": "core.models",
         "documentation": {}
     },
