@@ -33,6 +33,7 @@ class Team(models.Model):
   image = models.ImageField(upload_to='team/images', blank=True, null=True)
   name = models.CharField(max_length=255)
   position = models.CharField(max_length=255, blank=True, null=True)
+  description = models.TextField(blank=True,null=True)
   facebook_link = models.URLField(blank=True, null=True, default="https://www.facebook.com/")
   instagram_link = models.URLField(blank=True, null=True, default="https://www.instagram.com/")
   linkedin_link = models.URLField(blank=True, null=True, default="https://www.linkedin.com/")

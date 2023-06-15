@@ -201,6 +201,38 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -701,6 +733,24 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "core.migrations.0008_usercontact",
+        "description": "core.migrations.0008_usercontact",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0007_mainservice_date_mainservice_hover_text_and_more'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='UserContact',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(blank=True, max_length=255, null=True)),",
+        "detail": "core.migrations.0008_usercontact",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "core.migrations.0009_team_description",
+        "description": "core.migrations.0009_team_description",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0008_usercontact'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='team',\n            name='description',\n            field=models.TextField(blank=True, null=True),\n        ),",
+        "detail": "core.migrations.0009_team_description",
+        "documentation": {}
+    },
+    {
         "label": "CoreConfig",
         "kind": 6,
         "importPath": "core.apps",
@@ -750,7 +800,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Team(models.Model):\n  image = models.ImageField(upload_to='team/images', blank=True, null=True)\n  name = models.CharField(max_length=255)\n  position = models.CharField(max_length=255, blank=True, null=True)\n  facebook_link = models.URLField(blank=True, null=True, default=\"https://www.facebook.com/\")\n  instagram_link = models.URLField(blank=True, null=True, default=\"https://www.instagram.com/\")\n  linkedin_link = models.URLField(blank=True, null=True, default=\"https://www.linkedin.com/\")\nclass Service(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  image = models.ImageField(upload_to='service/images')",
+        "peekOfCode": "class Team(models.Model):\n  image = models.ImageField(upload_to='team/images', blank=True, null=True)\n  name = models.CharField(max_length=255)\n  position = models.CharField(max_length=255, blank=True, null=True)\n  description = models.TextField(blank=True,null=True)\n  facebook_link = models.URLField(blank=True, null=True, default=\"https://www.facebook.com/\")\n  instagram_link = models.URLField(blank=True, null=True, default=\"https://www.instagram.com/\")\n  linkedin_link = models.URLField(blank=True, null=True, default=\"https://www.linkedin.com/\")\nclass Service(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -831,7 +881,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n  path('',views.HomeView.as_view(), name='home'),\n  path('aboutus/', views.AboutUsView.as_view(),name='aboutus'),\n  path('event/', views.EventView.as_view(),name='event'),\n  path('event/<int:pk>/', views.EventDetailView.as_view(),name='event'),\n  path('service/', views.ServiceView.as_view(),name='service'),\n  path('service/<int:pk>/', views.ServiceDetailView.as_view(),name='service'),\n  path('contact/', views.ContactView.as_view(),name='contact'),\n  path('user-contact/', views.UserContactView.as_view(),name='contact'),\n  path('membership/', views.MembershipView.as_view(),name='membership'),",
+        "peekOfCode": "urlpatterns = [\n  path('',views.HomeView.as_view(), name='home'),\n  path('aboutus/', views.AboutUsView.as_view(),name='aboutus'),\n  path('event/', views.EventView.as_view(),name='event'),\n  path('event/<int:pk>/', views.EventDetailView.as_view(),name='event'),\n  path('service/', views.ServiceView.as_view(),name='service'),\n  path('service/<int:pk>/', views.ServiceDetailView.as_view(),name='service'),\n  path('contact/', views.ContactView.as_view(),name='contact'),\n  # path('usercontact/', views.UserContactView.as_view(),name='user-contact'),\n  path('membership/', views.MembershipView.as_view(),name='membership'),",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -894,7 +944,7 @@
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class ContactView(View):\n  def get(self, request):\n    contact = Contact.objects.last()\n    partners = Partners.objects.all()\n    context = {\n      'contact' : contact,\n      'partners':partners,\n    }\n    return render(request, 'contact.html', context)\nclass MembershipView(View):",
+        "peekOfCode": "class ContactView(View):\n  def get(self, request):\n    contact = Contact.objects.last()\n    partners = Partners.objects.all()\n    context = {\n      'contact' : contact,\n      'partners':partners,\n    }\n    return render(request, 'contact.html', context)\n  def post(self,request):",
         "detail": "core.views",
         "documentation": {}
     },
@@ -904,15 +954,6 @@
         "importPath": "core.views",
         "description": "core.views",
         "peekOfCode": "class MembershipView(View):\n  def get(self,request):\n    admin_bank = AdminBank.objects.last()\n    sub_plans = SubscriptionPlan.objects.all()\n    context = {\n      'admin_bank':admin_bank,\n      'sub_plans':sub_plans,\n    }\n    return render(request,'mem.html',context)\n  def post(self, request):",
-        "detail": "core.views",
-        "documentation": {}
-    },
-    {
-        "label": "UserContactView",
-        "kind": 6,
-        "importPath": "core.views",
-        "description": "core.views",
-        "peekOfCode": "class UserContactView(View):\n  def get(self,request):\n    pass\n  def post(self,request):\n    name = request.POST.get('name')\n    email = request.POST.get('email')\n    subject = request.POST.get('subject')\n    message = request.POST.get('message')\n    UserContact.objects.create(name=name,email=email,subject=subject,message=message)\n    return redirect(request,'home')",
         "detail": "core.views",
         "documentation": {}
     },

@@ -102,14 +102,26 @@ class ContactView(View):
     contact = Contact.objects.last()
     partners = Partners.objects.all()
     
-    
-    
     context = {
       'contact' : contact,
       'partners':partners,
       
     }
     return render(request, 'contact.html', context)
+  
+
+  def post(self,request):
+    name = request.POST.get('name')
+    email = request.POST.get('email')
+    subject = request.POST.get('subject')
+    message = request.POST.get('message')
+    
+    
+    user_contact = UserContact(name=name,email=email,subject=subject,message=message)
+    user_contact.save()
+    return redirect(request,'home')
+  
+  
   
 class MembershipView(View):
   def get(self,request):
@@ -153,19 +165,19 @@ class MembershipView(View):
     
     return redirect('home')
   
-class UserContactView(View):
-  def get(self,request):
-    pass
+# class UserContactView(View):
+#   def get(self,request):
+#     return red
   
-  def post(self,request):
-    name = request.POST.get('name')
-    email = request.POST.get('email')
-    subject = request.POST.get('subject')
-    message = request.POST.get('message')
+#   def post(self,request):
+#     name = request.POST.get('name')
+#     email = request.POST.get('email')
+#     subject = request.POST.get('subject')
+#     message = request.POST.get('message')
     
     
-    UserContact.objects.create(name=name,email=email,subject=subject,message=message)
-    
-    return redirect(request,'home')
+#     user_contact = UserContact(name=name,email=email,subject=subject,message=message)
+#     user_contact.save()
+#     return redirect(request,'home')
   
   

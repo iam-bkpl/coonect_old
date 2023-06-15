@@ -11,7 +11,7 @@ urlpatterns = [
   path('service/<int:pk>/', views.ServiceDetailView.as_view(),name='service'),
 
   path('contact/', views.ContactView.as_view(),name='contact'),
-  path('user-contact/', views.UserContactView.as_view(),name='contact'),
+  # path('usercontact/', views.UserContactView.as_view(),name='user-contact'),
   
   path('membership/', views.MembershipView.as_view(),name='membership'),
   

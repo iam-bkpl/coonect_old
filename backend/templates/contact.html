@@ -110,10 +110,10 @@
           <!-- <div class="col-sm-12 text-center mb-4">
             <a class="btn btn-primary" target="_blank" href=""> Donate Now <i class="fa fa-dollar"></i></a>
           </div> -->
-          <!--Grid column-->
+          <!--Grid column-->  
           <div class="col-sm-12 mb-4 col-md-5">
             <!--Form with header-->
-            <form>
+            <form method="POST" action="{% url 'contact' %}">
               {% csrf_token %}
               <div class="card border-primary rounded-0">
                 <div class="card-header p-0">
