@@ -174,3 +174,7 @@ class UserContact(models.Model):
   
 class NewsLetter(models.Model):
   email = models.EmailField(blank=True,null=True)
+  
+  def __str__(self):
+      return self.email
+  

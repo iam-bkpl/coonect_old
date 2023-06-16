@@ -41,6 +41,23 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "django.urls",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -62,6 +79,14 @@
         "description": "django.urls",
         "isExtraImport": true,
         "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -314,6 +339,39 @@
         "documentation": {}
     },
     {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
         "label": "AdminBank",
         "importPath": "core.models",
         "description": "core.models",
@@ -418,6 +476,22 @@
         "documentation": {}
     },
     {
+        "label": "NewsLetter",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Membership",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
         "label": "Contact",
         "importPath": "core.models",
         "description": "core.models",
@@ -439,6 +513,40 @@
         "description": "core.models",
         "isExtraImport": true,
         "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "download_csv",
+        "importPath": "core.views",
+        "description": "core.views",
+        "isExtraImport": true,
+        "detail": "core.views",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "urllib.request",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib.request",
+        "description": "urllib.request",
+        "detail": "urllib.request",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "django.core.files",
+        "description": "django.core.files",
+        "isExtraImport": true,
+        "detail": "django.core.files",
         "documentation": {}
     },
     {
@@ -879,7 +987,16 @@
         "kind": 6,
         "importPath": "core.admin",
         "description": "core.admin",
-        "peekOfCode": "class MembershipAdmin(admin.ModelAdmin):\n  list_display =['user','phone','membership_duration']\nadmin.site.register(AdminBank)\nadmin.site.register(Timing)\nadmin.site.register(HomePageImage)\nadmin.site.register(AboutUs)\nadmin.site.register(Team)\nadmin.site.register(Service)\nadmin.site.register(Partners)\nadmin.site.register(Event)",
+        "peekOfCode": "class MembershipAdmin(admin.ModelAdmin):\n  list_display =['user','phone','membership_duration']\n  def download_csv(self, request, queryset):\n        # Generate the CSV file\n        csv_data = generate_membership_csv()\n        # Create the HTTP response with CSV file\n        response = HttpResponse(content_type='text/csv')\n        response['Content-Disposition'] = 'attachment; filename=\"memberships.csv\"'\n        # Write the CSV file content to the response\n        writer = csv.writer(response)",
+        "detail": "core.admin",
+        "documentation": {}
+    },
+    {
+        "label": "MembershipAdmin",
+        "kind": 6,
+        "importPath": "core.admin",
+        "description": "core.admin",
+        "peekOfCode": "class MembershipAdmin(admin.ModelAdmin):\n    list_display = ['user', 'phone', 'membership_duration']\n    def download_csv(self, request, queryset):\n        # Generate the CSV file\n        csv_data = generate_membership_csv()\n        # Create the HTTP response with CSV file\n        response = HttpResponse(content_type='text/csv')\n        response['Content-Disposition'] = 'attachment; filename=\"memberships.csv\"'\n        # Write the CSV file content to the response\n        writer = csv.writer(response)",
         "detail": "core.admin",
         "documentation": {}
     },
@@ -899,6 +1016,15 @@
         "description": "core.context_processors",
         "peekOfCode": "def navbar_footer_context(request):\n    # Retrieve the necessary objects\n    contact_data = Contact.objects.last()\n    service_data = Service.objects.all()[:4]\n    timing_data = Timing.objects.last()\n    # Return a dictionary with the objects\n    return {\n        'contact_data': contact_data,\n        'footer_data': service_data,\n        'timing_data':timing_data,",
         "detail": "core.context_processors",
+        "documentation": {}
+    },
+    {
+        "label": "generate_membership_csv",
+        "kind": 2,
+        "importPath": "core.csv_generator",
+        "description": "core.csv_generator",
+        "peekOfCode": "def generate_membership_csv():\n    memberships = Membership.objects.all()\n    with open('memberships.csv', 'w', newline='') as csvfile:\n        fieldnames = ['User First Name', 'Address', 'Phone', 'Profile Image', 'Passport Front', 'Passport Back', 'Membership Type', 'Membership Duration']\n        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)\n        writer.writeheader()\n        for membership in memberships:\n            profile_image_url = membership.profile.url if membership.profile else ''\n            passport_front_url = membership.passport_front.url if membership.passport_front else ''\n            passport_back_url = membership.passport_back.url if membership.passport_back else ''",
+        "detail": "core.csv_generator",
         "documentation": {}
     },
     {
@@ -1023,7 +1149,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class UserContact(models.Model):\n  name = models.CharField(max_length=255,blank=True, null=True)\n  email = models.EmailField(blank=True, null=True)\n  subject = models.CharField(max_length=255,null=True,blank=True)\n  message = models.TextField(max_length=True,null=True)\n  def __str__(self):\n      return self.name\nclass NewsLetter(models.Model):\n  email = models.EmailField(blank=True,null=True)",
+        "peekOfCode": "class UserContact(models.Model):\n  name = models.CharField(max_length=255,blank=True, null=True)\n  email = models.EmailField(blank=True, null=True)\n  subject = models.CharField(max_length=255,null=True,blank=True)\n  message = models.TextField(max_length=True,null=True)\n  def __str__(self):\n      return self.name\nclass NewsLetter(models.Model):\n  email = models.EmailField(blank=True,null=True)\n  def __str__(self):",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1032,7 +1158,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class NewsLetter(models.Model):\n  email = models.EmailField(blank=True,null=True)",
+        "peekOfCode": "class NewsLetter(models.Model):\n  email = models.EmailField(blank=True,null=True)\n  def __str__(self):\n      return self.email",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1114,6 +1240,24 @@
         "importPath": "core.views",
         "description": "core.views",
         "peekOfCode": "class MembershipView(View):\n  def get(self,request):\n    admin_bank = AdminBank.objects.last()\n    sub_plans = SubscriptionPlan.objects.all()\n    context = {\n      'admin_bank':admin_bank,\n      'sub_plans':sub_plans,\n    }\n    return render(request,'mem.html',context)\n  def post(self, request):",
+        "detail": "core.views",
+        "documentation": {}
+    },
+    {
+        "label": "NewsLetterView",
+        "kind": 6,
+        "importPath": "core.views",
+        "description": "core.views",
+        "peekOfCode": "class NewsLetterView(View):\n  def post(self,request):\n    email = request.POST.get('email')\n    newsletter = NewsLetter(email=email)\n    newsletter.save()\n    return redirect('contact')",
+        "detail": "core.views",
+        "documentation": {}
+    },
+    {
+        "label": "download_csv",
+        "kind": 2,
+        "importPath": "core.views",
+        "description": "core.views",
+        "peekOfCode": "def download_csv(request):\n    # Generate the CSV file\n    generate_membership_csv()\n    # Set the appropriate response headers\n    response = HttpResponse(content_type='text/csv')\n    response['Content-Disposition'] = 'attachment; filename=\"memberships.csv\"'\n    # Write the CSV file content to the response\n    with open('memberships.csv', 'r') as csvfile:\n        csv_data = csvfile.read()\n        response.write(csv_data)",
         "detail": "core.views",
         "documentation": {}
     },

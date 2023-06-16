@@ -1,10 +1,29 @@
 from django.contrib.auth.models import User
+import django.urls
 from django.views import View
 from django.shortcuts import render,redirect
 from .models import (AboutUs, AdminBank, Contact, Event, HomePageImage, MainService, Membership,
-  Partners, Service, SubscriptionPlan, Team, Timing, UserContact)
+  NewsLetter, Partners, Service, SubscriptionPlan, Team, Timing, UserContact)
 from django.utils import timezone
 import random
+import csv
+from django.http import HttpResponse
+from .csv_generator import generate_membership_csv
+
+def download_csv(request):
+    # Generate the CSV file
+    generate_membership_csv()
+
+    # Set the appropriate response headers
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="memberships.csv"'
+
+    # Write the CSV file content to the response
+    with open('memberships.csv', 'r') as csvfile:
+        csv_data = csvfile.read()
+        response.write(csv_data)
+
+    return response
 
 class HomeView(View):
   def get(self,request):
@@ -167,19 +186,11 @@ class MembershipView(View):
     
     return redirect('home')
   
-# class UserContactView(View):
-#   def get(self,request):
-#     return red
-  
-#   def post(self,request):
-#     name = request.POST.get('name')
-#     email = request.POST.get('email')
-#     subject = request.POST.get('subject')
-#     message = request.POST.get('message')
+class NewsLetterView(View):
+  def post(self,request):
+    email = request.POST.get('email')
     
-    
-#     user_contact = UserContact(name=name,email=email,subject=subject,message=message)
-#     user_contact.save()
-#     return redirect(request,'home')
-  
-  
+    newsletter = NewsLetter(email=email)
+    newsletter.save()
+
+    return redirect('contact')  

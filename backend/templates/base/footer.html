@@ -45,10 +45,24 @@
         <div class="newsletter">
           <h2>Newsletter</h2>
           <p>Subscribe us</p>
-          <div class="form">
-            <input class="form-control" placeholder="Email here" />
-            <button class="btn">Submit</button>
-          </div>
+          <form method="POST" action="{% url 'newsletter' %}">
+            <div class="form">
+              {% csrf_token %}
+              <input
+                class="form-control"
+                name="email"
+                type="text"
+                placeholder="Email here"
+              />
+              <input
+                type="submit"
+                name="submit"
+                value="Submit"
+                class="custom-btn"
+                style="background-color: #2868e6"
+              />
+            </div>
+          </form>
         </div>
       </div>
     </div>
