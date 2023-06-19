@@ -181,7 +181,7 @@
         </div>
       </section>
       {% endcomment %}
-      <section style="height: 450px">
+      {% comment %} <section style="height: 450px">
         <h3 style="color: #00f; text-align: center">Our Events</h3>
 
         <div id="carousel">
@@ -205,8 +205,9 @@
           >&nbsp;
           <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
-      </section>
+      </section> {% endcomment %}
 
+{% include 'base/our_events.html' %}
       <!--************Events*********-->
       <section style="margin-top: 34px">
         <script
