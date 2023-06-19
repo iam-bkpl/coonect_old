@@ -105,11 +105,15 @@
           <div class="about-text">
             <h2 class="about-heading">About Us</h2>
             <p>{{about.text}}</p>
-            <button class="event-button black-bg">
-              <a href=" {% url 'event' %} " style="text-decoration: none"
-                >Events</a
-              >
+
+            {% comment %} <button class="event-button black-bg"> {% endcomment %}
+            <button class="btn-dark event-button">
+
+              <a href=" {% url 'event' %} " style="text-decoration: none " class="text-white" >
+                Events
+              </a>
             </button>
+
             <button class="service-button white-bg">
               <a href=" {% url 'service' %} " style="text-decoration: none"
                 >Services</a
@@ -182,7 +186,7 @@
 
         <div id="carousel">
           {% for event in events %}
-          <div class="{{ event.class }}">
+          <div class="{{ event.class }} selected">
             <img src="{{ event.image.url }}" />
           </div>
           {% endfor %}

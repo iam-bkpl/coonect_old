@@ -23,6 +23,9 @@
             <a href="{{contact_data.linkedin}} " target="_blank"
               ><i class="fab fa-linkedin-in"></i
             ></a>
+            <a href="{{contact_data.tiktok}} " target="_blank"
+              ><i class="fab fa-tiktok"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -45,6 +48,7 @@
         <div class="newsletter">
           <h2>Newsletter</h2>
           <p>Subscribe us</p>
+
           <form method="POST" action="{% url 'newsletter' %}">
             <div class="form">
               {% csrf_token %}
@@ -54,13 +58,7 @@
                 type="text"
                 placeholder="Email here"
               />
-              <input
-                type="submit"
-                name="submit"
-                value="Submit"
-                class="custom-btn"
-                style="background-color: #2868e6"
-              />
+              <button class="btn">Submit</button>
             </div>
           </form>
         </div>

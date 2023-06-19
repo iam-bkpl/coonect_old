@@ -1032,7 +1032,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class AdminBank(models.Model):\n  account_name = models.CharField(max_length=255)\n  bank_name = models.CharField(max_length=255)\n  branch = models.CharField(max_length=255)\n  account_number = models.CharField(max_length=255)\n  qr_code = models.ImageField(upload_to='admin_bank')\n  def __str__(self):\n      return self.account_name\nclass Timing(models.Model):\n  first_day = models.CharField(max_length=255)",
+        "peekOfCode": "class AdminBank(models.Model):\n    account_name = models.CharField(max_length=255)\n    bank_name = models.CharField(max_length=255)\n    branch = models.CharField(max_length=255)\n    account_number = models.CharField(max_length=255)\n    qr_code = models.ImageField(upload_to=\"admin_bank\")\n    def __str__(self):\n        return self.account_name\nclass Timing(models.Model):\n    first_day = models.CharField(max_length=255)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1041,7 +1041,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Timing(models.Model):\n  first_day = models.CharField(max_length=255)\n  last_day = models.CharField(max_length=255)\n  start_time = models.TimeField()\n  end_time = models.TimeField()\n  def __str__(self):\n    return f\" {self.first_day} - {self.last_day} \"\nclass HomePageImage(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  image = models.ImageField(upload_to='home')",
+        "peekOfCode": "class Timing(models.Model):\n    first_day = models.CharField(max_length=255)\n    last_day = models.CharField(max_length=255)\n    start_time = models.TimeField()\n    end_time = models.TimeField()\n    def __str__(self):\n        return f\" {self.first_day} - {self.last_day} \"\nclass HomePageImage(models.Model):\n    name = models.CharField(max_length=255, blank=True, null=True)\n    image = models.ImageField(upload_to=\"home\")",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1050,7 +1050,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class HomePageImage(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  image = models.ImageField(upload_to='home')\n  def __str__(self):\n      return self.name\nclass AboutUs(models.Model):\n  image = models.ImageField(upload_to='abouts/images', blank=True, null=True)\n  text = models.TextField(blank=True, null=True)\n  def __str__(self):\n      return self.text",
+        "peekOfCode": "class HomePageImage(models.Model):\n    name = models.CharField(max_length=255, blank=True, null=True)\n    image = models.ImageField(upload_to=\"home\")\n    def __str__(self):\n        return self.name\nclass AboutUs(models.Model):\n    image = models.ImageField(upload_to=\"abouts/images\", blank=True, null=True)\n    text = models.TextField(blank=True, null=True)\n    def __str__(self):\n        return self.text",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1059,7 +1059,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class AboutUs(models.Model):\n  image = models.ImageField(upload_to='abouts/images', blank=True, null=True)\n  text = models.TextField(blank=True, null=True)\n  def __str__(self):\n      return self.text\n# class SocialLink(models.Model):\n#   name = models.CharField(max_length=255, blank=True, null=True)\n#   link = models.URLField(blank=True,null=True)  \nclass Team(models.Model):\n  image = models.ImageField(upload_to='team/images', blank=True, null=True)",
+        "peekOfCode": "class AboutUs(models.Model):\n    image = models.ImageField(upload_to=\"abouts/images\", blank=True, null=True)\n    text = models.TextField(blank=True, null=True)\n    def __str__(self):\n        return self.text\n# class SocialLink(models.Model):\n#   name = models.CharField(max_length=255, blank=True, null=True)\n#   link = models.URLField(blank=True,null=True)\nclass Team(models.Model):\n    image = models.ImageField(upload_to=\"team/images\", blank=True, null=True)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1068,7 +1068,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Team(models.Model):\n  image = models.ImageField(upload_to='team/images', blank=True, null=True)\n  name = models.CharField(max_length=255)\n  position = models.CharField(max_length=255, blank=True, null=True)\n  description = models.TextField(blank=True,null=True)\n  facebook_link = models.URLField(blank=True, null=True, default=\"https://www.facebook.com/\")\n  instagram_link = models.URLField(blank=True, null=True, default=\"https://www.instagram.com/\")\n  linkedin_link = models.URLField(blank=True, null=True, default=\"https://www.linkedin.com/\")\n  def __str__(self):\n      return self.name",
+        "peekOfCode": "class Team(models.Model):\n    image = models.ImageField(upload_to=\"team/images\", blank=True, null=True)\n    name = models.CharField(max_length=255)\n    position = models.CharField(max_length=255, blank=True, null=True)\n    description = models.TextField(blank=True, null=True)\n    facebook_link = models.URLField(\n        blank=True, null=True, default=\"https://www.facebook.com/\"\n    )\n    instagram_link = models.URLField(\n        blank=True, null=True, default=\"https://www.instagram.com/\"",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1077,7 +1077,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Service(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  image = models.ImageField(upload_to='service/images')\n  text = models.TextField()\n  def __str__(self):\n      return self.name\nclass Partners(models.Model):\n  name = models.CharField(max_length=255)\n  image = models.ImageField(upload_to='partner/images')\n  def __str__(self):",
+        "peekOfCode": "class Service(models.Model):\n    name = models.CharField(max_length=255, blank=True, null=True)\n    image = models.ImageField(upload_to=\"service/images\")\n    text = models.TextField()\n    def __str__(self):\n        return self.name\nclass Partners(models.Model):\n    name = models.CharField(max_length=255)\n    image = models.ImageField(upload_to=\"partner/images\")\n    def __str__(self):",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1086,7 +1086,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Partners(models.Model):\n  name = models.CharField(max_length=255)\n  image = models.ImageField(upload_to='partner/images')\n  def __str__(self):\n      return self.name\nclass EventFeatures(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  description = models.CharField(max_length=255, blank=True,null=True)\n  def __str__(self):\n      return self.name",
+        "peekOfCode": "class Partners(models.Model):\n    name = models.CharField(max_length=255)\n    image = models.ImageField(upload_to=\"partner/images\")\n    def __str__(self):\n        return self.name\nclass EventFeatures(models.Model):\n    name = models.CharField(max_length=255, blank=True, null=True)\n    description = models.CharField(max_length=255, blank=True, null=True)\n    def __str__(self):\n        return self.name",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1095,7 +1095,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class EventFeatures(models.Model):\n  name = models.CharField(max_length=255, blank=True, null=True)\n  description = models.CharField(max_length=255, blank=True,null=True)\n  def __str__(self):\n      return self.name\nclass Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='event/images', blank=True,null=True)\n  location = models.CharField(max_length=255, blank=True, null=True)",
+        "peekOfCode": "class EventFeatures(models.Model):\n    name = models.CharField(max_length=255, blank=True, null=True)\n    description = models.CharField(max_length=255, blank=True, null=True)\n    def __str__(self):\n        return self.name\nclass Event(models.Model):\n    name = models.CharField(\n        max_length=255, null=True, blank=True, default=\"Event Title\"\n    )\n    description = models.TextField(null=True, blank=True)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1104,7 +1104,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Event(models.Model):\n  name = models.CharField(max_length=255, null=True, blank=True, default='Event Title')\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='event/images', blank=True,null=True)\n  location = models.CharField(max_length=255, blank=True, null=True)\n  hover_text = models.CharField(max_length=255, blank=True, null=True)\n  date = models.DateTimeField()\n  def __str__(self):\n      return self.name\nclass MainService(models.Model):",
+        "peekOfCode": "class Event(models.Model):\n    name = models.CharField(\n        max_length=255, null=True, blank=True, default=\"Event Title\"\n    )\n    description = models.TextField(null=True, blank=True)\n    image = models.ImageField(upload_to=\"event/images\", blank=True, null=True)\n    location = models.CharField(max_length=255, blank=True, null=True)\n    hover_text = models.CharField(max_length=255, blank=True, null=True)\n    date = models.DateTimeField()\n    def __str__(self):",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1113,7 +1113,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class MainService(models.Model):\n  name = models.CharField(max_length=255,blank=True, null=True)\n  description = models.TextField(null=True, blank=True)\n  image = models.ImageField(upload_to='mainService/images',null=True, blank=True)\n  hover_text = models.CharField(max_length=255, blank=True, null=True)  \n  location = models.CharField(max_length=255,null=True,blank=True)\n  price = models.PositiveIntegerField(default=0)\n  date = models.DateTimeField(auto_now=True)\n  def __str__(self):\n      return self.name",
+        "peekOfCode": "class MainService(models.Model):\n    name = models.CharField(max_length=255, blank=True, null=True)\n    description = models.TextField(null=True, blank=True)\n    image = models.ImageField(upload_to=\"mainService/images\", null=True, blank=True)\n    hover_text = models.CharField(max_length=255, blank=True, null=True)\n    location = models.CharField(max_length=255, null=True, blank=True)\n    price = models.PositiveIntegerField(default=0)\n    date = models.DateTimeField(auto_now=True)\n    def __str__(self):\n        return self.name",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1122,7 +1122,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Contact(models.Model):\n  phone = models.CharField(max_length=20)\n  email = models.EmailField()\n  address = models.CharField(max_length=255)\n  map = models.TextField(blank=True,null=True)\n  facebook = models.URLField(blank=True,null=True)\n  twitter = models.URLField(blank=True,null=True)\n  youtube = models.URLField(blank=True,null=True)\n  instagram = models.URLField(blank=True,null=True)\n  linkedin = models.URLField(blank=True,null=True)",
+        "peekOfCode": "class Contact(models.Model):\n    phone = models.CharField(max_length=20)\n    email = models.EmailField()\n    address = models.CharField(max_length=255)\n    map = models.TextField(blank=True, null=True)\n    facebook = models.URLField(blank=True, null=True)\n    twitter = models.URLField(blank=True, null=True)\n    youtube = models.URLField(blank=True, null=True)\n    instagram = models.URLField(blank=True, null=True)\n    linkedin = models.URLField(blank=True, null=True)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1131,7 +1131,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Membership(models.Model):\n  MEMBERSHIP_TYPE_INDIVIDUAL = 'individual'\n  MEMBERSHIP_TYPE_FAMILY = 'family'\n  MEMBERSHIP_TYPE_STUDENT = 'student'\n  MEMBERSHIP_TYPE_CHOICES = [\n    (MEMBERSHIP_TYPE_INDIVIDUAL, 'individual'),\n    (MEMBERSHIP_TYPE_FAMILY, 'family'),\n    (MEMBERSHIP_TYPE_STUDENT, 'student'),\n    ]\n  MEMBERSHIP_DURATION_ANNUAL= 'annual'",
+        "peekOfCode": "class Membership(models.Model):\n    MEMBERSHIP_TYPE_INDIVIDUAL = \"individual\"\n    MEMBERSHIP_TYPE_FAMILY = \"family\"\n    MEMBERSHIP_TYPE_STUDENT = \"student\"\n    MEMBERSHIP_TYPE_CHOICES = [\n        (MEMBERSHIP_TYPE_INDIVIDUAL, \"individual\"),\n        (MEMBERSHIP_TYPE_FAMILY, \"family\"),\n        (MEMBERSHIP_TYPE_STUDENT, \"student\"),\n    ]\n    MEMBERSHIP_DURATION_ANNUAL = \"annual\"",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1140,7 +1140,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class SubscriptionPlan(models.Model):\n  name = models.CharField(max_length=255)\n  description = models.TextField(null=True, blank=True)\n  def __str__(self):\n      return self.name\nclass UserContact(models.Model):\n  name = models.CharField(max_length=255,blank=True, null=True)\n  email = models.EmailField(blank=True, null=True)\n  subject = models.CharField(max_length=255,null=True,blank=True)\n  message = models.TextField(max_length=True,null=True)",
+        "peekOfCode": "class SubscriptionPlan(models.Model):\n    name = models.CharField(max_length=255)\n    description = models.TextField(null=True, blank=True)\n    def __str__(self):\n        return self.name\nclass UserContact(models.Model):\n    name = models.CharField(max_length=255, blank=True, null=True)\n    email = models.EmailField(blank=True, null=True)\n    subject = models.CharField(max_length=255, null=True, blank=True)\n    message = models.TextField(max_length=True, null=True)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1149,7 +1149,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class UserContact(models.Model):\n  name = models.CharField(max_length=255,blank=True, null=True)\n  email = models.EmailField(blank=True, null=True)\n  subject = models.CharField(max_length=255,null=True,blank=True)\n  message = models.TextField(max_length=True,null=True)\n  def __str__(self):\n      return self.name\nclass NewsLetter(models.Model):\n  email = models.EmailField(blank=True,null=True)\n  def __str__(self):",
+        "peekOfCode": "class UserContact(models.Model):\n    name = models.CharField(max_length=255, blank=True, null=True)\n    email = models.EmailField(blank=True, null=True)\n    subject = models.CharField(max_length=255, null=True, blank=True)\n    message = models.TextField(max_length=True, null=True)\n    def __str__(self):\n        return self.name\nclass NewsLetter(models.Model):\n    email = models.EmailField(blank=True, null=True)\n    def __str__(self):",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1158,7 +1158,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class NewsLetter(models.Model):\n  email = models.EmailField(blank=True,null=True)\n  def __str__(self):\n      return self.email",
+        "peekOfCode": "class NewsLetter(models.Model):\n    email = models.EmailField(blank=True, null=True)\n    def __str__(self):\n        return self.email",
         "detail": "core.models",
         "documentation": {}
     },
