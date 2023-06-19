@@ -516,6 +516,14 @@
         "documentation": {}
     },
     {
+        "label": "Event",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
         "label": "Service",
         "importPath": "core.models",
         "description": "core.models",
@@ -1039,7 +1047,7 @@
         "kind": 2,
         "importPath": "core.context_processors",
         "description": "core.context_processors",
-        "peekOfCode": "def navbar_footer_context(request):\n    # Retrieve the necessary objects\n    contact_data = Contact.objects.last()\n    service_data = Service.objects.all()[:4]\n    timing_data = Timing.objects.last()\n    # Return a dictionary with the objects\n    return {\n        'contact_data': contact_data,\n        'footer_data': service_data,\n        'timing_data':timing_data,",
+        "peekOfCode": "def navbar_footer_context(request):\n    # Retrieve the necessary objects\n    contact_data = Contact.objects.last()\n    service_data = Service.objects.all()[:4]\n    timing_data = Timing.objects.last()\n    event_date = Event.objects.all()\n    # Return a dictionary with the objects\n    return {\n        \"contact_data\": contact_data,\n        \"footer_data\": service_data,",
         "detail": "core.context_processors",
         "documentation": {}
     },
