@@ -322,6 +322,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -980,6 +996,15 @@
         "description": "core.migrations.0013_newsletter",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0012_contact_facebook_contact_instagram_contact_linkedin_and_more'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='NewsLetter',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('email', models.EmailField(blank=True, max_length=254, null=True)),",
         "detail": "core.migrations.0013_newsletter",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "core.migrations.0014_contact_tiktok",
+        "description": "core.migrations.0014_contact_tiktok",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0013_newsletter'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='contact',\n            name='tiktok',\n            field=models.URLField(blank=True, null=True),\n        ),",
+        "detail": "core.migrations.0014_contact_tiktok",
         "documentation": {}
     },
     {
